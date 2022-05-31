@@ -4,10 +4,14 @@ import java.util.*;
 import javax.swing.*;
 import java.awt.*;
 public class NewCharacterScreen extends Screen{
+    String chosenTypeLabel = "";
     JPanel testPanel,testButtonPanel;
-    JLabel testLabel, chosenTypeLabel;
+    JLabel testLabel;
     JButton testButton, wizardButton, rogueButton, fighterButton;
     BackButtonHandler bbHandler = new BackButtonHandler();
+    FighterButtonHandler fbHandler = new FighterButtonHandler();
+    RogueButtonHandler rbHandler = new RogueButtonHandler();
+    WizardButtonHandler wbHandler = new WizardButtonHandler();
     public NewCharacterScreen(String type,Container container, GameManager game) {
         super(type,container,game);
         hasCombat = false;
@@ -23,7 +27,7 @@ public class NewCharacterScreen extends Screen{
         testLabel.setBackground(Color.RED);
         testLabel.setForeground(Color.WHITE);
         testLabel.setFont(buttonFont);
-        testLabel.setText("Choose your player");
+        testLabel.setText("Choose your player: " + chosenTypeLabel);
         testPanel.add(testLabel);
 
         testButtonPanel = new JPanel();
@@ -40,7 +44,7 @@ public class NewCharacterScreen extends Screen{
         wizardButton.setFont(buttonFont);
         wizardButton.setFocusPainted(false);
         //action listener
-        wizardButton.addActionListener(bbHandler);
+        wizardButton.addActionListener(wbHandler);
         testButtonPanel.add(wizardButton);
 
         //Rogue
@@ -50,7 +54,7 @@ public class NewCharacterScreen extends Screen{
         rogueButton.setFont(buttonFont);
         rogueButton.setFocusPainted(false);
         //action listener
-        rogueButton.addActionListener(bbHandler);
+        rogueButton.addActionListener(rbHandler);
         testButtonPanel.add(rogueButton);
 
         //Fighter
@@ -60,7 +64,7 @@ public class NewCharacterScreen extends Screen{
         fighterButton.setFont(buttonFont);
         fighterButton.setFocusPainted(false);
         //action listener
-        fighterButton.addActionListener(bbHandler);
+        fighterButton.addActionListener(fbHandler);
         testButtonPanel.add(fighterButton);
 
         testButton = new JButton("BACK");
@@ -91,6 +95,33 @@ public class NewCharacterScreen extends Screen{
         public void actionPerformed(ActionEvent e) {
             updateVisibility(false);
             game.changeScreen("titleScreen");
+        }
+    }
+    public class WizardButtonHandler implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            chosenTypeLabel = "Wizard";
+            testLabel.setText("Choose your player: " + chosenTypeLabel);
+            con.repaint();
+        }
+    }
+    public class FighterButtonHandler implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            chosenTypeLabel = "Fighter";
+            testLabel.setText("Choose your player: " + chosenTypeLabel);
+            con.repaint();
+        }
+    }
+    public class RogueButtonHandler implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            chosenTypeLabel = "Rogue";
+            testLabel.setText("Choose your player: " + chosenTypeLabel);
+            con.repaint();
         }
     }
 }
