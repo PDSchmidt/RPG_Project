@@ -20,6 +20,11 @@ public class GameCharacter {
 
     }
 
+    //getName method
+    public String getName () {
+        return name;
+    }
+
     //Stat Related Methods
     public Map< String, Integer> getStats() {
         return stats;
