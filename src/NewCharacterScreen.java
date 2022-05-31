@@ -6,7 +6,7 @@ import java.awt.*;
 public class NewCharacterScreen extends Screen{
     JPanel testPanel,testButtonPanel;
     JLabel testLabel;
-    JButton testButton;
+    JButton testButton, wizardButton, rogueButton, fighterButton;
     BackButtonHandler bbHandler = new BackButtonHandler();
     public NewCharacterScreen(String type,Container container, GameManager game) {
         super(type,container,game);
@@ -29,6 +29,7 @@ public class NewCharacterScreen extends Screen{
         testButtonPanel = new JPanel();
         testButtonPanel.setBounds(440,400,400,200);
         testButtonPanel.setBackground(Color.RED);
+        testButtonPanel.setLayout(new GridLayout(4,1));
         con.add(testButtonPanel);
 
         testButton = new JButton("BACK");
@@ -39,6 +40,37 @@ public class NewCharacterScreen extends Screen{
         //action listener
         testButton.addActionListener(bbHandler);
         testButtonPanel.add(testButton);
+
+        //Wizard
+        wizardButton = new JButton("WIZARD");
+        wizardButton.setBackground(Color.BLACK);
+        wizardButton.setForeground(Color.WHITE);
+        wizardButton.setFont(buttonFont);
+        wizardButton.setFocusPainted(false);
+        //action listener
+        wizardButton.addActionListener(bbHandler);
+        testButtonPanel.add(wizardButton);
+
+        //Rogue
+        rogueButton = new JButton("ROGUE");
+        rogueButton.setBackground(Color.BLACK);
+        rogueButton.setForeground(Color.WHITE);
+        rogueButton.setFont(buttonFont);
+        rogueButton.setFocusPainted(false);
+        //action listener
+        rogueButton.addActionListener(bbHandler);
+        testButtonPanel.add(rogueButton);
+
+        //Fighter
+        fighterButton = new JButton("FIGHTER");
+        fighterButton.setBackground(Color.BLACK);
+        fighterButton.setForeground(Color.WHITE);
+        fighterButton.setFont(buttonFont);
+        fighterButton.setFocusPainted(false);
+        //action listener
+        fighterButton.addActionListener(bbHandler);
+        testButtonPanel.add(fighterButton);
+
 
         testPanel.setVisible(false);
         testButtonPanel.setVisible(false);
