@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="f150d9c5-0a5b-4a81-8da9-d2e49512c1b3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/BossRoom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DungeonEntrance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LoadCharacterScreen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/NewCharacterScreen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RoomOne.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RoomThree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RoomTwo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Screen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TitleScreen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VillageScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,13 +31,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="GameManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GameManager" />
@@ -70,6 +66,7 @@
       <updated>1653988109512</updated>
       <workItem from="1653988111162" duration="6689000" />
       <workItem from="1654024149688" duration="7534000" />
+      <workItem from="1654034313416" duration="1482000" />
     </task>
     <task id="LOCAL-00001" summary="First">
       <created>1653988196404</created>
