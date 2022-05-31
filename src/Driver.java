@@ -7,7 +7,7 @@ public class Driver {
         GameCharacter Alven = new GameCharacter();
         Steven.attack(Alven);
         System.out.println(Alven.getCurrentHP());
-        System.out.println("Yo, I'm testing this code!!!!!!");
+        System.out.println("Yo, I'm testing this cod!!!!!!");
 
     }
 }
