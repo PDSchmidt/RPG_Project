@@ -3,7 +3,9 @@ import javax.swing.*;
 import java.awt.*;
 
 public class GameManager {
-    Character player;
+    GameCharacter player;
+
+
     Map<String,Screen> screens;
     JFrame mainWindow;
     Container con;
@@ -15,6 +17,7 @@ public class GameManager {
     }
     public GameManager(){
         //Create main window
+        player = new GameCharacter();
         mainWindow = new JFrame();
         mainWindow.setSize(1280,720);
         mainWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -52,6 +55,8 @@ public class GameManager {
         titleScreen.updateVisibility(true);
         mainWindow.setVisible(true);
         con.repaint();
+
+
     }
     public void changeScreen(String displayScreen){
         screens.get(displayScreen).updateVisibility(true);

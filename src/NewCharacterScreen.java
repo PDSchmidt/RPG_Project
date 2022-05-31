@@ -5,7 +5,7 @@ import javax.swing.*;
 import java.awt.*;
 public class NewCharacterScreen extends Screen{
     JPanel testPanel,testButtonPanel;
-    JLabel testLabel;
+    JLabel testLabel, chosenTypeLabel;
     JButton testButton, wizardButton, rogueButton, fighterButton;
     BackButtonHandler bbHandler = new BackButtonHandler();
     public NewCharacterScreen(String type,Container container, GameManager game) {
@@ -23,7 +23,7 @@ public class NewCharacterScreen extends Screen{
         testLabel.setBackground(Color.RED);
         testLabel.setForeground(Color.WHITE);
         testLabel.setFont(buttonFont);
-        testLabel.setText("TESTING");
+        testLabel.setText("Choose your player");
         testPanel.add(testLabel);
 
         testButtonPanel = new JPanel();
@@ -32,14 +32,6 @@ public class NewCharacterScreen extends Screen{
         testButtonPanel.setLayout(new GridLayout(4,1));
         con.add(testButtonPanel);
 
-        testButton = new JButton("BACK");
-        testButton.setBackground(Color.BLACK);
-        testButton.setForeground(Color.WHITE);
-        testButton.setFont(buttonFont);
-        testButton.setFocusPainted(false);
-        //action listener
-        testButton.addActionListener(bbHandler);
-        testButtonPanel.add(testButton);
 
         //Wizard
         wizardButton = new JButton("WIZARD");
@@ -70,6 +62,15 @@ public class NewCharacterScreen extends Screen{
         //action listener
         fighterButton.addActionListener(bbHandler);
         testButtonPanel.add(fighterButton);
+
+        testButton = new JButton("BACK");
+        testButton.setBackground(Color.BLACK);
+        testButton.setForeground(Color.WHITE);
+        testButton.setFont(buttonFont);
+        testButton.setFocusPainted(false);
+        //action listener
+        testButton.addActionListener(bbHandler);
+        testButtonPanel.add(testButton);
 
 
         testPanel.setVisible(false);
