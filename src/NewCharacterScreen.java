@@ -7,11 +7,12 @@ public class NewCharacterScreen extends Screen{
     String chosenTypeLabel = "";
     JPanel testPanel,testButtonPanel;
     JLabel testLabel;
-    JButton testButton, wizardButton, rogueButton, fighterButton;
+    JButton testButton,createButton, wizardButton, rogueButton, fighterButton;
     BackButtonHandler bbHandler = new BackButtonHandler();
     FighterButtonHandler fbHandler = new FighterButtonHandler();
     RogueButtonHandler rbHandler = new RogueButtonHandler();
     WizardButtonHandler wbHandler = new WizardButtonHandler();
+    CreateButtonHandler cbHandler = new CreateButtonHandler();
     public NewCharacterScreen(String type,Container container, GameManager game) {
         super(type,container,game);
         hasCombat = false;
@@ -33,7 +34,7 @@ public class NewCharacterScreen extends Screen{
         testButtonPanel = new JPanel();
         testButtonPanel.setBounds(440,400,400,200);
         testButtonPanel.setBackground(Color.RED);
-        testButtonPanel.setLayout(new GridLayout(4,1));
+        testButtonPanel.setLayout(new GridLayout(5,1));
         con.add(testButtonPanel);
 
 
@@ -75,6 +76,15 @@ public class NewCharacterScreen extends Screen{
         //action listener
         testButton.addActionListener(bbHandler);
         testButtonPanel.add(testButton);
+
+        createButton = new JButton("CREATE");
+        createButton.setBackground(Color.BLACK);
+        createButton.setForeground(Color.WHITE);
+        createButton.setFont(buttonFont);
+        createButton.setFocusPainted(false);
+        //action listener
+        createButton.addActionListener(cbHandler);
+        testButtonPanel.add(createButton);
 
 
         testPanel.setVisible(false);
@@ -122,6 +132,28 @@ public class NewCharacterScreen extends Screen{
             chosenTypeLabel = "Rogue";
             testLabel.setText("Choose your player: " + chosenTypeLabel);
             con.repaint();
+        }
+    }
+    public class CreateButtonHandler implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            if(chosenTypeLabel.equals("Rogue")){
+                player = new Rogue();
+                testLabel.setText("You created a Rogue!");
+            }
+            else if(chosenTypeLabel.equals("Wizard")){
+                player = new Wizard();
+                testLabel.setText("You created a Wizard!");
+            }
+            else if(chosenTypeLabel.equals("Fighter")){
+                player = new Fighter();
+                testLabel.setText("You created a Fighter!");
+            }
+            else{
+
+            }
+
         }
     }
 }

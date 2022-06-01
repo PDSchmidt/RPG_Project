@@ -7,7 +7,7 @@ public class Screen {
     String screenType;
     boolean hasCombat, combatDone, visibility = false;
     Queue<Character> monsters;
-    Character player;
+    GameCharacter player;
     Container con;
     //Fonts for all screens to access
     Font buttonFont = new Font("Times New Roman", Font.PLAIN, 24);
