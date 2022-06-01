@@ -1,5 +1,18 @@
+import java.util.Scanner;
+import java.io.File;
+import java.io.FileNotFoundException;
 public class Driver {
     public static void main(String[] args) {
+        File newFile = new File("savefile.txt");
+
+        //Scanner object
+        try {
+            Scanner scnr = new Scanner(newFile);
+            System.out.println(scnr);
+        }
+        catch (FileNotFoundException e) {
+            System.out.println("File Does Not Exist!");
+        }
         GameCharacter stat = new GameCharacter();
         System.out.println(stat.getStats());
 
@@ -15,7 +28,7 @@ public class Driver {
         Wizard wazup = new Wizard();
         System.out.println(rooze.getName());
         System.out.println(fifi.getStats());
-        System.out.println(fifi.getSpecificStat("Strength"));
+        System.out.println(wazup.getSpecificStat("Strength"));
 
     }
 }
