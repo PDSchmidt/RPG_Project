@@ -140,15 +140,15 @@ public class NewCharacterScreen extends Screen{
         public void actionPerformed(ActionEvent e) {
             if(chosenTypeLabel.equals("Rogue")){
                 player = new Rogue();
-                testLabel.setText("You created a Rogue!");
+                testLabel.setText("You created a Rogue! Their name is: " + player.getName());
             }
             else if(chosenTypeLabel.equals("Wizard")){
                 player = new Wizard();
-                testLabel.setText("You created a Wizard!");
+                testLabel.setText("You created a Wizard! Their name is: " + player.getName());
             }
             else if(chosenTypeLabel.equals("Fighter")){
                 player = new Fighter();
-                testLabel.setText("You created a Fighter!");
+                testLabel.setText("You created a Fighter! Their name is: " + player.getName());
             }
             else{
 
