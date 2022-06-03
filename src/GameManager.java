@@ -61,6 +61,14 @@ public class GameManager {
     public void changeScreen(String displayScreen){
         screens.get(displayScreen).updateVisibility(true);
     }
+    /*public void saveGame(){
+        try{
+
+        }
+        catch{
+
+        }
+    }*/
 
 
 }
