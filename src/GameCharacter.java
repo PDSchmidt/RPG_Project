@@ -20,7 +20,7 @@ public class GameCharacter {
 
     }
 
-    //getName method
+    //getName/setName method
     public String getName () {
         return name;
     }
@@ -39,6 +39,9 @@ public class GameCharacter {
     }
     public Integer getCurrentHP() {
         return CurrentHp;
+    }
+    public void setMaxHP (int maxHp) {
+        this.MaxHp = maxHp;
     }
     public void attack (GameCharacter target) {
         target.setCurrentHp(target.getCurrentHP() - baseDamage);
