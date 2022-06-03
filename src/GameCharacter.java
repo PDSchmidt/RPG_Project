@@ -7,6 +7,8 @@ public class GameCharacter {
     public int CurrentHp;
     String name;
     private int baseDamage = 4;
+
+    //Constructors
     public GameCharacter() {
         stats.put("Strength", 10);
         stats.put("Dexterity", 10);
@@ -17,7 +19,10 @@ public class GameCharacter {
         MaxHp = 12;
         CurrentHp = MaxHp;
         name = "Bilbo Swaggins";
-
+    }
+    public GameCharacter (String selectedName) {
+        new GameCharacter();
+        this.name = selectedName;
     }
 
     //getName/setName method

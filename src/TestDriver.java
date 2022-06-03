@@ -13,6 +13,9 @@ public class TestDriver {
         System.out.println(Alven.getCurrentHP());
         System.out.println("Yo, I'm testing this cod!!!!!!");
 
+        GameCharacter Nancy = new Fighter("Nancy Higgens");
+        System.out.println(Nancy.getName());
+
         //Character Type Testing
         Rogue rooze = new Rogue();
         Fighter fifi = new Fighter();
