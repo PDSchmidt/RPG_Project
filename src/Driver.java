@@ -3,16 +3,18 @@ import java.io.File;
 import java.io.FileNotFoundException;
 public class Driver {
     public static void main(String[] args) {
-        File newFile = new File("savefile.txt");
-
-        //Scanner object
+        File newFile = new File("src/savefile.txt");
+        //Scanner Object
         try {
             Scanner scnr = new Scanner(newFile);
-            System.out.println(scnr);
+            while (scnr.hasNext()) {
+                System.out.print(scnr.nextLine() + " ");
+            }
+        } catch(FileNotFoundException e) {
+
         }
-        catch (FileNotFoundException e) {
-            System.out.println("File Does Not Exist!");
-        }
+        //Scanner object
+
         GameCharacter stat = new GameCharacter();
         System.out.println(stat.getStats());
 
