@@ -6,11 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f150d9c5-0a5b-4a81-8da9-d2e49512c1b3" name="Changes" comment="First">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Fighter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fighter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameCharacter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameCharacter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rogue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TestDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestDriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Wizard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Wizard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Driver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/savefile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/savefile.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +45,14 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.TestDriver">
+  <component name="RunManager" selected="Application.Driver">
+    <configuration name="Driver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Driver" />
+      <module name="RPG_Project" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GameManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GameManager" />
       <module name="RPG_Project" />
@@ -56,16 +60,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestDriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="TestDriver" />
-      <module name="RPG_Project" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TestDriver" />
+        <item itemvalue="Application.Driver" />
         <item itemvalue="Application.GameManager" />
       </list>
     </recent_temporary>
@@ -81,7 +78,7 @@
       <workItem from="1653988111162" duration="6689000" />
       <workItem from="1654024149688" duration="7534000" />
       <workItem from="1654034313416" duration="3708000" />
-      <workItem from="1654214509934" duration="7160000" />
+      <workItem from="1654214509934" duration="1420000" />
     </task>
     <task id="LOCAL-00001" summary="First">
       <created>1653988196404</created>
@@ -132,21 +129,7 @@
       <option name="project" value="LOCAL" />
       <updated>1654043200985</updated>
     </task>
-    <task id="LOCAL-00008" summary="First">
-      <created>1654216813242</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1654216813242</updated>
-    </task>
-    <task id="LOCAL-00009" summary="First">
-      <created>1654221055935</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1654221055935</updated>
-    </task>
-    <option name="localTasksCounter" value="10" />
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

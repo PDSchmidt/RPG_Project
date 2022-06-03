@@ -7,6 +7,8 @@ public class NewCharacterScreen extends Screen{
     String chosenTypeLabel = "";
     JPanel testPanel,testButtonPanel;
     JLabel testLabel;
+
+    JTextField nameField;
     JButton testButton,createButton, wizardButton, rogueButton, fighterButton;
     BackButtonHandler bbHandler = new BackButtonHandler();
     FighterButtonHandler fbHandler = new FighterButtonHandler();
@@ -22,6 +24,7 @@ public class NewCharacterScreen extends Screen{
         testPanel = new JPanel();
         testPanel.setBounds(100,100,1080,200);
         testPanel.setBackground(Color.BLUE);
+        testPanel.setLayout(new GridLayout(2,1));
         con.add(testPanel);
 
         testLabel = new JLabel();
@@ -30,6 +33,12 @@ public class NewCharacterScreen extends Screen{
         testLabel.setFont(buttonFont);
         testLabel.setText("Choose your player: " + chosenTypeLabel);
         testPanel.add(testLabel);
+
+        nameField = new JTextField("Enter your character's name here");
+        nameField.setBackground(Color.RED);
+        nameField.setForeground(Color.WHITE);
+        nameField.setFont(buttonFont);
+        testPanel.add(nameField);
 
         testButtonPanel = new JPanel();
         testButtonPanel.setBounds(440,400,400,200);
@@ -139,15 +148,15 @@ public class NewCharacterScreen extends Screen{
         @Override
         public void actionPerformed(ActionEvent e) {
             if(chosenTypeLabel.equals("Rogue")){
-                player = new Rogue();
+                player = new Rogue(/*nameField.getText()*/);
                 testLabel.setText("You created a Rogue! Their name is: " + player.getName());
             }
             else if(chosenTypeLabel.equals("Wizard")){
-                player = new Wizard();
+                player = new Wizard(/*nameField.getText()*/);
                 testLabel.setText("You created a Wizard! Their name is: " + player.getName());
             }
             else if(chosenTypeLabel.equals("Fighter")){
-                player = new Fighter();
+                player = new Fighter(/*nameField.getText()*/);
                 testLabel.setText("You created a Fighter! Their name is: " + player.getName());
             }
             else{
