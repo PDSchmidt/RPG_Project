@@ -1,19 +1,8 @@
 import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
-public class Driver {
+public class TestDriver {
     public static void main(String[] args) {
-        File newFile = new File("src/savefile.txt");
-        //Scanner Object
-        try {
-            Scanner scnr = new Scanner(newFile);
-            while (scnr.hasNext()) {
-                System.out.print(scnr.nextLine() + " ");
-            }
-        } catch(FileNotFoundException e) {
-
-        }
-        //Scanner object
 
         GameCharacter stat = new GameCharacter();
         System.out.println(stat.getStats());
@@ -32,5 +21,7 @@ public class Driver {
         System.out.println(fifi.getStats());
         System.out.println(wazup.getSpecificStat("Strength"));
 
+        //FileScannerTest
+        FileScanner SaveFile = new FileScanner();
     }
 }
