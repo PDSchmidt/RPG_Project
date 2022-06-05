@@ -128,7 +128,8 @@ public class TitleScreen extends Screen{
 
         @Override
         public void actionPerformed(ActionEvent e) {
-
+            updateVisibility(false);
+            game.changeScreen("dungeonEntrance");
         }
     }
 
