@@ -1,0 +1,99 @@
+Index: src/Driver.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import java.util.Scanner;\r\nimport java.io.File;\r\nimport java.io.FileNotFoundException;\r\npublic class Driver {\r\n    public static void main(String[] args) {\r\n        File newFile = new File(\"savefile.txt\");\r\n\r\n        //Scanner object\r\n        try {\r\n            Scanner scnr = new Scanner(newFile);\r\n            System.out.println(scnr);\r\n        }\r\n        catch (FileNotFoundException e) {\r\n            System.out.println(\"File Does Not Exist!\");\r\n        }\r\n        GameCharacter stat = new GameCharacter();\r\n        System.out.println(stat.getStats());\r\n\r\n        GameCharacter Steven = new GameCharacter();\r\n        GameCharacter Alven = new GameCharacter();\r\n        Steven.attack(Alven);\r\n        System.out.println(Alven.getCurrentHP());\r\n        System.out.println(\"Yo, I'm testing this cod!!!!!!\");\r\n\r\n        //Character Type Testing\r\n        Rogue rooze = new Rogue();\r\n        Fighter fifi = new Fighter();\r\n        Wizard wazup = new Wizard();\r\n        System.out.println(rooze.getName());\r\n        System.out.println(fifi.getStats());\r\n        System.out.println(wazup.getSpecificStat(\"Strength\"));\r\n\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Driver.java b/src/Driver.java
+--- a/src/Driver.java	
++++ b/src/Driver.java	
+@@ -9,6 +9,10 @@
+         try {
+             Scanner scnr = new Scanner(newFile);
+             System.out.println(scnr);
++            while(scnr.hasNext()){
++                System.out.println(scnr.next());
++            }
++            scnr.close();
+         }
+         catch (FileNotFoundException e) {
+             System.out.println("File Does Not Exist!");
+Index: savefile.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>testNameMcFileName
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/savefile.txt b/savefile.txt
+--- a/savefile.txt	
++++ b/savefile.txt	
+@@ -1,1 +1,7 @@
+-testNameMcFileName
+\ No newline at end of file
++testNameMcFileName
++15
++12
++10
++8
++10
++15
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"f150d9c5-0a5b-4a81-8da9-d2e49512c1b3\" name=\"Changes\" comment=\"First\">\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/uiDesigner.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_31_2022_4_03_PM__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_31_2022_4_03_PM__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/Driver.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Driver.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/Fighter.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Fighter.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/GameCharacter.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/GameCharacter.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/Rouge.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Rogue.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/Wizard.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Wizard.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"29vKR1KcvMYMQPSxVHyT9KhSUFl\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RunManager\" selected=\"Application.GameManager\">\r\n    <configuration name=\"Driver\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Driver\" />\r\n      <module name=\"RPG_Project\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"GameManager\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"GameManager\" />\r\n      <module name=\"RPG_Project\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.GameManager\" />\r\n        <item itemvalue=\"Application.Driver\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"f150d9c5-0a5b-4a81-8da9-d2e49512c1b3\" name=\"Changes\" comment=\"\" />\r\n      <created>1653988109512</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1653988109512</updated>\r\n      <workItem from=\"1653988111162\" duration=\"6689000\" />\r\n      <workItem from=\"1654024149688\" duration=\"7534000\" />\r\n      <workItem from=\"1654034313416\" duration=\"3708000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"First\">\r\n      <created>1653988196404</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1653988196404</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"First\">\r\n      <created>1654036362901</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1654036362901</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"First\">\r\n      <created>1654036658151</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1654036658151</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"First\">\r\n      <created>1654037203321</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1654037203321</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"First\">\r\n      <created>1654037235489</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1654037235489</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"6\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"First\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"First\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -5,14 +5,12 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="f150d9c5-0a5b-4a81-8da9-d2e49512c1b3" name="Changes" comment="First">
+-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_31_2022_4_03_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_31_2022_4_03_PM__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_31_2022_3_48_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_31_2022_3_48_PM__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_31_2022_4_15_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_31_2022_4_15_PM__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_31_2022_4_39_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_31_2022_4_39_PM__Changes_.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/savefile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/savefile.txt" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Driver.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/Fighter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fighter.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/GameCharacter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameCharacter.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/Rouge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rogue.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/Wizard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Wizard.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -50,7 +48,7 @@
+     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
+   }
+ }</component>
+-  <component name="RunManager" selected="Application.GameManager">
++  <component name="RunManager" selected="Application.Driver">
+     <configuration name="Driver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+       <option name="MAIN_CLASS_NAME" value="Driver" />
+       <module name="RPG_Project" />
+@@ -67,8 +65,8 @@
+     </configuration>
+     <recent_temporary>
+       <list>
+-        <item itemvalue="Application.GameManager" />
+         <item itemvalue="Application.Driver" />
++        <item itemvalue="Application.GameManager" />
+       </list>
+     </recent_temporary>
+   </component>
+@@ -83,6 +81,8 @@
+       <workItem from="1653988111162" duration="6689000" />
+       <workItem from="1654024149688" duration="7534000" />
+       <workItem from="1654034313416" duration="3708000" />
++      <workItem from="1654117068507" duration="226000" />
++      <workItem from="1654215375215" duration="600000" />
+     </task>
+     <task id="LOCAL-00001" summary="First">
+       <created>1653988196404</created>

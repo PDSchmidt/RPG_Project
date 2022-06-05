@@ -38,6 +38,10 @@ public class VillageScreen extends Screen{
                 "\n   Her name is Gertrude. She has brown hair and is as sweet as can be. Will you help rescue her? I mu" +
                 "st warn you, this is a dangerous task, but you will be rewarded handsomely!\"" +
                 "\n\n   You weigh your options carefully, what will you do?");
+        textMap.put(2,"   The King looks relieved that you are willing to take on this quest." +
+                "\n\n   \"Excellent! The Captain will escort you to the cave entrance. Best of luck on your journey. Now " +
+                "go and please save my daughter!\" he exclaims. \n\n   The Captain of the guard beckons you to follow and guides you " +
+                "outside of town to the entrance of a foreboding cave...");
         updateText(textMap.get(displayTextCount));
         displayTextCount++;
     }
@@ -70,11 +74,21 @@ public class VillageScreen extends Screen{
                 yesButton.setForeground(Color.WHITE);
                 yesButton.setFont(buttonFont);
                 yesButton.setFocusPainted(false);
+                yesButton.addActionListener(cbHandler);
                 mainButtonPanel.add(noButton);
                 mainButtonPanel.add(yesButton);
             }
-
-
+            else if(displayTextCount == 3){
+                mainButtonPanel.removeAll();
+                mainButtonPanel.add(continueButton);
+                con.repaint();
+                displayTextCount++;
+            }
+            else if(displayTextCount == 4){
+                updateVisibility(false);
+                game.changeScreen("dungeonEntrance");
+            }
+            else{}
         }
     }
 }

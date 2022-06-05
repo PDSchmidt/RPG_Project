@@ -64,7 +64,18 @@ public class GameManager {
     }
     public void saveGame(){
         try{
-            BufferedWriter writer = new BufferedWriter((new FileWriter("savefile3.txt",true)));
+            BufferedWriter writer = new BufferedWriter((new FileWriter("savefile3.txt",false)));
+            writer.write(player.getCharacterType() + "\n");
+            writer.write(player.getName() + "\n");
+            writer.write("" + player.getSpecificStat("Strength") + "\n");
+            writer.write("" + player.getSpecificStat("Dexterity") + "\n");
+            writer.write("" + player.getSpecificStat("Constitution") + "\n");
+            writer.write("" + player.getSpecificStat("Intelligence") + "\n");
+            writer.write("" + player.getSpecificStat("Wisdom") + "\n");
+            writer.write("" + player.getSpecificStat("Charisma") + "\n");
+            writer.write("" + player.getCurrentHP() + "\n");
+            writer.write("" + player.getMaxHp());
+            writer.close();
 
         }
         catch(Exception e){

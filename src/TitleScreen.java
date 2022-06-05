@@ -134,7 +134,7 @@ public class TitleScreen extends Screen{
 
     private void loadGame() {
         try {
-            Scanner scnr = new Scanner(new File("savefile2.txt"));
+            Scanner scnr = new Scanner(new File("savefile3.txt"));
             String type = scnr.next();
             if(type.equals("Rogue")){
                 game.player = new Rogue();
@@ -154,6 +154,7 @@ public class TitleScreen extends Screen{
             game.player.stats.put("Charisma", scnr.nextInt());
             game.player.setCurrentHp(scnr.nextInt());
             //need setters for setMaxHP and Name
+            game.player.setMaxHP(scnr.nextInt());
             loadedStatus.setText("LOADED " + game.player.getName() + " SUCCESSFULLY!");
             scnr.close();
 
