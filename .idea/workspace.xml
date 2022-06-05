@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f150d9c5-0a5b-4a81-8da9-d2e49512c1b3" name="Changes" comment="First">
-      <change beforePath="$PROJECT_DIR$/src/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Driver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NewCharacterScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NewCharacterScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/savefile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/savefile.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Goblin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/HobGoblin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/HobgoblinCaptain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameCharacter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameCharacter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Driver.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +48,7 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.GameManager">
+  <component name="RunManager" selected="Application.Driver">
     <configuration name="Driver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Driver" />
       <module name="RPG_Project" />
@@ -62,8 +65,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GameManager" />
         <item itemvalue="Application.Driver" />
+        <item itemvalue="Application.GameManager" />
       </list>
     </recent_temporary>
   </component>
@@ -79,6 +82,7 @@
       <workItem from="1654024149688" duration="7534000" />
       <workItem from="1654034313416" duration="3708000" />
       <workItem from="1654214509934" duration="1420000" />
+      <workItem from="1654394853744" duration="12475000" />
     </task>
     <task id="LOCAL-00001" summary="First">
       <created>1653988196404</created>

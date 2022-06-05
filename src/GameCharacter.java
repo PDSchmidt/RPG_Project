@@ -1,12 +1,15 @@
+import java.util.Random;
 import java.util.Map;
 import java.util.TreeMap;
 
 public class GameCharacter {
     Map<String, Integer> stats = new TreeMap<String, Integer>();
-    private int MaxHp;
+    Map<String, Integer> statModifiers = new TreeMap<String, Integer>();
+    Random randNum = new Random();
+    int MaxHp;
     public int CurrentHp;
     String name;
-    private int baseDamage = 4;
+     int baseDamage;
 
     //Constructors
     public GameCharacter() {
@@ -19,6 +22,7 @@ public class GameCharacter {
         MaxHp = 12;
         CurrentHp = MaxHp;
         name = "Bilbo Swaggins";
+        baseDamage = 4;
     }
     public GameCharacter (String selectedName) {
         new GameCharacter();

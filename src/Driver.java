@@ -1,7 +1,4 @@
-import java.util.Scanner;
-import java.io.File;
-import java.io.FileNotFoundException;
-public class TestDriver {
+public class Driver {
     public static void main(String[] args) {
 
         GameCharacter stat = new GameCharacter();
@@ -26,5 +23,8 @@ public class TestDriver {
 
         //FileScannerTest
         FileScanner SaveFile = new FileScanner();
+
+        HobGoblin boss = new HobGoblin();
+        System.out.println(boss.baseDamage);
     }
 }
