@@ -7,10 +7,12 @@ public class Wizard extends PlayerCharacter{
         stats.put("Wisdom", 12);
         stats.put("Charisma", 4);
         name = "Wizzils";
+        characterType = "Wizard";
     }
     public Wizard(String selectedName) {
         new Wizard();
         this.name = selectedName;
+        characterType = "Wizard";
     }
 
 }

@@ -1,3 +1,5 @@
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.util.*;
 import javax.swing.*;
 import java.awt.*;
@@ -17,7 +19,6 @@ public class GameManager {
     }
     public GameManager(){
         //Create main window
-        player = new GameCharacter();
         mainWindow = new JFrame();
         mainWindow.setSize(1280,720);
         mainWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -30,8 +31,6 @@ public class GameManager {
         screens = new HashMap<>();
         Screen titleScreen = new TitleScreen("titleScreen", con, this);
         screens.put("titleScreen", titleScreen);
-        Screen villageScreen = new VillageScreen("villageScreen", con, this);
-        screens.put("villageScreen",villageScreen);
         Screen dungeonEntrance = new DungeonEntrance("dungeonEntrance", con, this);
         screens.put("dungeonEntrance",dungeonEntrance);
         Screen roomOne = new RoomOne("roomOne", con, this);
@@ -46,6 +45,8 @@ public class GameManager {
         screens.put("newCharacterScreen",newCharacterScreen);
         Screen loadCharacterScreen = new LoadCharacterScreen("loadCharacterScreen", con, this);
         screens.put("loadCharacterScreen",loadCharacterScreen);
+        Screen creditScreen = new CreditScreen("creditScreen", con, this);
+        screens.put("creditScreen",creditScreen);
 
 
 
@@ -61,14 +62,15 @@ public class GameManager {
     public void changeScreen(String displayScreen){
         screens.get(displayScreen).updateVisibility(true);
     }
-    /*public void saveGame(){
+    public void saveGame(){
         try{
+            BufferedWriter writer = new BufferedWriter((new FileWriter("savefile3.txt",true)));
 
         }
-        catch{
+        catch(Exception e){
 
         }
-    }*/
+    }
 
 
 }

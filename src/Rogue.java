@@ -7,9 +7,12 @@ public class Rogue extends PlayerCharacter{
         stats.put("Wisdom", 14);
         stats.put("Charisma", 14);
         name = "Rogesh";
+        characterType = "Rogue";
     }
     public Rogue(String selectedName) {
         new Rogue();
         this.name = selectedName;
+        characterType = "Rogue";
     }
+
 }

@@ -8,6 +8,8 @@ public class GameCharacter {
     String name;
     private int baseDamage = 4;
 
+    String characterType;
+
     //Constructors
     public GameCharacter() {
         stats.put("Strength", 10);
@@ -19,6 +21,7 @@ public class GameCharacter {
         MaxHp = 12;
         CurrentHp = MaxHp;
         name = "Bilbo Swaggins";
+        characterType = "GameCharacter";
     }
     public GameCharacter (String selectedName) {
         new GameCharacter();
@@ -28,6 +31,13 @@ public class GameCharacter {
     //getName/setName method
     public String getName () {
         return name;
+    }
+
+    public String getCharacterType(){
+        return characterType;
+    }
+    public void setCharacterType(String type){
+        characterType = type;
     }
 
     //Stat Related Methods
