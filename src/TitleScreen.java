@@ -70,9 +70,23 @@ public class TitleScreen extends Screen{
 
         loadedPanel.add(loadedStatus);
         con.add(loadedPanel);
-
-
         con.add(buttonPanel);
+
+        continuePanel = new JPanel();
+        continuePanel.setBounds(880,475,300,50);
+        continuePanel.setBackground(Color.RED);
+        continuePanel.setLayout(new GridLayout(1,1));
+        con.add(continuePanel);
+
+        continueButton = new JButton("CONTINUE");
+        continueButton.setBackground(Color.BLACK);
+        continueButton.setForeground(Color.WHITE);
+        continueButton.setFont(buttonFont);
+        continueButton.setFocusPainted(false);
+        //action listener
+        continueButton.addActionListener(cbHandler);
+        continuePanel.add(continueButton);
+        con.add(continuePanel);
         con.repaint();
 
     }
@@ -84,6 +98,10 @@ public class TitleScreen extends Screen{
         buttonPanel.setVisible(visibility);
         loadedPanel.setVisible(visibility);
         loadedStatus.setText("");
+        if(game.player != null)
+            continuePanel.setVisible(visibility);
+        else
+            continuePanel.setVisible(false);
 
     }
     public void createNewGame(){
@@ -116,28 +134,31 @@ public class TitleScreen extends Screen{
 
     private void loadGame() {
         try {
-            Scanner scnr = new Scanner(new File("savefile2.txt"));
+            Scanner scnr = new Scanner(new File("savefile3.txt"));
             String type = scnr.next();
             if(type.equals("Rogue")){
-                player = new Rogue();
+                game.player = new Rogue();
             }
             else if(type.equals("Wizard")){
-                player = new Wizard();
+                game.player = new Wizard();
             }
             else{
-                player = new Fighter();
+                game.player = new Fighter();
             }
-            player.name = scnr.next();
-            player.stats.put("Strength", scnr.nextInt());
-            player.stats.put("Dexterity", scnr.nextInt());
-            player.stats.put("Constitution", scnr.nextInt());
-            player.stats.put("Intelligence", scnr.nextInt());
-            player.stats.put("Wisdom", scnr.nextInt());
-            player.stats.put("Charisma", scnr.nextInt());
-            player.setCurrentHp(scnr.nextInt());
+            game.player.name = scnr.next();
+            game.player.stats.put("Strength", scnr.nextInt());
+            game.player.stats.put("Dexterity", scnr.nextInt());
+            game.player.stats.put("Constitution", scnr.nextInt());
+            game.player.stats.put("Intelligence", scnr.nextInt());
+            game.player.stats.put("Wisdom", scnr.nextInt());
+            game.player.stats.put("Charisma", scnr.nextInt());
+            game.player.setCurrentHp(scnr.nextInt());
             //need setters for setMaxHP and Name
-            loadedStatus.setText("LOADED " + player.getName() + " SUCCESSFULLY!");
+            game.player.setMaxHP(scnr.nextInt());
+            loadedStatus.setText("LOADED " + game.player.getName() + " SUCCESSFULLY!");
             scnr.close();
+
+            continuePanel.setVisible(true);
             con.repaint();
         } catch(FileNotFoundException e) {
             loadedStatus.setText(e.toString());

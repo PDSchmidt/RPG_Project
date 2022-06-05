@@ -1,51 +1,50 @@
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.*;
 import javax.swing.*;
 import java.awt.*;
 public class NewCharacterScreen extends Screen{
     String chosenTypeLabel = "";
-    JPanel testPanel,testButtonPanel;
+    JPanel textDisplayPanel, optionButtonPanel, startAdventurePanel;
     JLabel testLabel;
 
     JTextField nameField;
-    JButton testButton,createButton, wizardButton, rogueButton, fighterButton;
+    JButton backButton,createButton, wizardButton, rogueButton, fighterButton, startAdventureButton;
     BackButtonHandler bbHandler = new BackButtonHandler();
     FighterButtonHandler fbHandler = new FighterButtonHandler();
     RogueButtonHandler rbHandler = new RogueButtonHandler();
     WizardButtonHandler wbHandler = new WizardButtonHandler();
     CreateButtonHandler cbHandler = new CreateButtonHandler();
+    StartAdventureHandler saHandler = new StartAdventureHandler();
     public NewCharacterScreen(String type,Container container, GameManager game) {
         super(type,container,game);
         hasCombat = false;
         combatDone = false;
         visibility = false;
 
-        testPanel = new JPanel();
-        testPanel.setBounds(100,100,1080,200);
-        testPanel.setBackground(Color.BLUE);
-        testPanel.setLayout(new GridLayout(2,1));
-        con.add(testPanel);
+        textDisplayPanel = new JPanel();
+        textDisplayPanel.setBounds(100,100,1080,200);
+        textDisplayPanel.setBackground(Color.BLACK);
+        textDisplayPanel.setLayout(new GridLayout(2,1));
+        con.add(textDisplayPanel);
 
         testLabel = new JLabel();
-        testLabel.setBackground(Color.RED);
+        testLabel.setBackground(Color.BLACK);
         testLabel.setForeground(Color.WHITE);
         testLabel.setFont(buttonFont);
         testLabel.setText("Choose your player: " + chosenTypeLabel);
-        testPanel.add(testLabel);
+        textDisplayPanel.add(testLabel);
 
         nameField = new JTextField("Enter your character's name here");
-        nameField.setBackground(Color.RED);
+        nameField.setBackground(Color.BLACK);
         nameField.setForeground(Color.WHITE);
         nameField.setFont(buttonFont);
-        testPanel.add(nameField);
+        textDisplayPanel.add(nameField);
 
-        testButtonPanel = new JPanel();
-        testButtonPanel.setBounds(440,400,400,200);
-        testButtonPanel.setBackground(Color.RED);
-        testButtonPanel.setLayout(new GridLayout(5,1));
-        con.add(testButtonPanel);
-
+        optionButtonPanel = new JPanel();
+        optionButtonPanel.setBounds(440,400,400,200);
+        optionButtonPanel.setBackground(Color.RED);
+        optionButtonPanel.setLayout(new GridLayout(5,1));
+        con.add(optionButtonPanel);
 
         //Wizard
         wizardButton = new JButton("WIZARD");
@@ -55,7 +54,7 @@ public class NewCharacterScreen extends Screen{
         wizardButton.setFocusPainted(false);
         //action listener
         wizardButton.addActionListener(wbHandler);
-        testButtonPanel.add(wizardButton);
+        optionButtonPanel.add(wizardButton);
 
         //Rogue
         rogueButton = new JButton("ROGUE");
@@ -65,7 +64,7 @@ public class NewCharacterScreen extends Screen{
         rogueButton.setFocusPainted(false);
         //action listener
         rogueButton.addActionListener(rbHandler);
-        testButtonPanel.add(rogueButton);
+        optionButtonPanel.add(rogueButton);
 
         //Fighter
         fighterButton = new JButton("FIGHTER");
@@ -75,17 +74,9 @@ public class NewCharacterScreen extends Screen{
         fighterButton.setFocusPainted(false);
         //action listener
         fighterButton.addActionListener(fbHandler);
-        testButtonPanel.add(fighterButton);
+        optionButtonPanel.add(fighterButton);
 
-        testButton = new JButton("BACK");
-        testButton.setBackground(Color.BLACK);
-        testButton.setForeground(Color.WHITE);
-        testButton.setFont(buttonFont);
-        testButton.setFocusPainted(false);
-        //action listener
-        testButton.addActionListener(bbHandler);
-        testButtonPanel.add(testButton);
-
+        //Create Button
         createButton = new JButton("CREATE");
         createButton.setBackground(Color.BLACK);
         createButton.setForeground(Color.WHITE);
@@ -93,19 +84,57 @@ public class NewCharacterScreen extends Screen{
         createButton.setFocusPainted(false);
         //action listener
         createButton.addActionListener(cbHandler);
-        testButtonPanel.add(createButton);
+        optionButtonPanel.add(createButton);
+
+        //Back Button
+        backButton = new JButton("BACK");
+        backButton.setBackground(Color.BLACK);
+        backButton.setForeground(Color.WHITE);
+        backButton.setFont(buttonFont);
+        backButton.setFocusPainted(false);
+        //action listener
+        backButton.addActionListener(bbHandler);
+        optionButtonPanel.add(backButton);
 
 
-        testPanel.setVisible(false);
-        testButtonPanel.setVisible(false);
+
+        startAdventurePanel = new JPanel();
+        startAdventurePanel.setBounds(880,475,300,50);
+        startAdventurePanel.setBackground(Color.RED);
+        startAdventurePanel.setLayout(new GridLayout(1,1));
+        con.add(startAdventurePanel);
+
+        startAdventureButton = new JButton("START ADVENTURE");
+        startAdventureButton.setBackground(Color.BLACK);
+        startAdventureButton.setForeground(Color.WHITE);
+        startAdventureButton.setFont(buttonFont);
+        startAdventureButton.setFocusPainted(false);
+        //action listener
+        startAdventureButton.addActionListener(saHandler);
+        startAdventurePanel.add(startAdventureButton);
+
+
+
+
+
+
+
+
+
+        textDisplayPanel.setVisible(false);
+        optionButtonPanel.setVisible(false);
+        startAdventurePanel.setVisible(false);
 
     }
 
     @Override
     public void updateVisibility(boolean newValue) {
         visibility = newValue;
-        testPanel.setVisible(visibility);
-        testButtonPanel.setVisible(visibility);
+        textDisplayPanel.setVisible(visibility);
+        optionButtonPanel.setVisible(visibility);
+        startAdventurePanel.setVisible(false);
+        if(game.player != null)
+            startAdventurePanel.setVisible(visibility);
 
     }
     public class BackButtonHandler implements ActionListener{
@@ -148,20 +177,34 @@ public class NewCharacterScreen extends Screen{
         @Override
         public void actionPerformed(ActionEvent e) {
             if(chosenTypeLabel.equals("Rogue")){
-                player = new Rogue(nameField.getText());
-                testLabel.setText("You created a Rogue! Their name is: " + player.getName());
+                game.player = new Rogue(nameField.getText());
+                testLabel.setText("You created a Rogue! Their name is: " + game.player.getName());
             }
             else if(chosenTypeLabel.equals("Wizard")){
-                player = new Wizard(nameField.getText());
-                testLabel.setText("You created a Wizard! Their name is: " + player.getName());
+                game.player = new Wizard(nameField.getText());
+                testLabel.setText("You created a Wizard! Their name is: " + game.player.getName());
             }
             else if(chosenTypeLabel.equals("Fighter")){
-                player = new Fighter(nameField.getText());
-                testLabel.setText("You created a Fighter! Their name is: " + player.getName());
+                game.player = new Fighter(nameField.getText());
+                testLabel.setText("You created a Fighter! Their name is: " + game.player.getName());
             }
             else{
 
             }
+            if(game.player != null)
+                startAdventurePanel.setVisible(true);
+
+
+        }
+    }
+    public class StartAdventureHandler implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            updateVisibility(false);
+            Screen villageScreen = new VillageScreen("villageScreen", con, game);
+            game.screens.put("villageScreen",villageScreen);
+            game.changeScreen("villageScreen");
 
         }
     }
