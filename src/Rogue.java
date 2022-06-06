@@ -1,4 +1,4 @@
-public class Rogue extends PlayerCharacter{
+public class Rogue extends PlayerCharacter {
     public Rogue() {
         stats.put("Strength", 12);
         stats.put("Dexterity", 18);
@@ -15,12 +15,14 @@ public class Rogue extends PlayerCharacter{
         name = "Rogesh";
         characterType = "Rogue";
     }
+
     public Rogue(String selectedName) {
         new Rogue();
         this.name = selectedName;
         characterType = "Rogue";
     }
-    public void attack (GameCharacter target) {
+
+    public void attack(GameCharacter target) {
         if ((randNum.nextInt(1, 21) + getAbilityScore("DEX")) >= (randNum.nextInt(1, 21) + target.getAbilityScore("STR"))) {
             target.setCurrentHp(target.getCurrentHP() - baseDamage);
             //You hit the target for "baseDamage" amount of damage
@@ -28,4 +30,5 @@ public class Rogue extends PlayerCharacter{
             // Tell the player how stupid they are for missing.
         }
 
+    }
 }
