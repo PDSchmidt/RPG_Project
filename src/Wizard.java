@@ -13,6 +13,8 @@ public class Wizard extends PlayerCharacter{
         statModifiers.put("WIS", 2);
         statModifiers.put("CHA", 1);
         name = "Wizzils";
+        MaxHp = 48;
+        CurrentHp = MaxHp;
         characterType = "Wizard";
     }
     public Wizard(String selectedName) {
@@ -21,9 +23,11 @@ public class Wizard extends PlayerCharacter{
         characterType = "Wizard";
     }
     public void attack (GameCharacter target) {
-        if ((randNum.nextInt(1, 21) + getAbilityScore("INT")) >= (randNum.nextInt(1, 21) + target.getAbilityScore("STR"))) {
+        if ((randNum.nextInt(1, 21) + getAbilityScore("INT")) >= (randNum.nextInt(1, 21) + target.getAbilityScore("CON"))) {
+            baseDamage = randNum.nextInt(2, 5) + getAbilityScore("INT");
             target.setCurrentHp(target.getCurrentHP() - baseDamage);
             //You hit the target for "baseDamage" amount of damage
+            //You focus your mana and launch a radiant spell at (target.type) for (baseDamage) damage!
         } else {
             // Tell the player how stupid they are for missing.
             System.out.println("You missed you bloody idiot");
