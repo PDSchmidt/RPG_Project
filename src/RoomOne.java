@@ -14,9 +14,9 @@ public class RoomOne extends Screen{
         hasCombat = true;
         combatDone = false;
         monsters = new LinkedList<GameCharacter>();
-        monsters.add(new GameCharacter("Goblin"));
-        monsters.add(new GameCharacter("Goblin"));
-        monsters.add(new GameCharacter("Goblin"));
+        monsters.add(new Goblin());
+        //monsters.add(new Goblin());
+        //monsters.add(new Goblin());
         if(!combatDone){
             updateText("You muster the strength to enter the cave. The inside is musty and pitch black. " +
                     "\nYou light a torch. As the flames illuminate this room, " + monsters.size() + " " +
