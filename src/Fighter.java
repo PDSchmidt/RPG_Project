@@ -20,4 +20,7 @@ public class Fighter extends PlayerCharacter{
         this.name = selectedName;
         characterType = "Fighter";
     }
+    public void attack (GameCharacter target) {
+        target.setCurrentHp(target.getCurrentHP() - baseDamage);
+    }
 }

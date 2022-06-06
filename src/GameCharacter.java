@@ -39,7 +39,7 @@ public class GameCharacter {
         return stats;
     }
     public Integer getSpecificStat(String key) {
-        return stats.get(key);
+        return statModifiers.get(key);
     }
 
     //HP related methods
