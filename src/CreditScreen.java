@@ -29,6 +29,16 @@ public class CreditScreen extends Screen{
     public void updateVisibility(boolean newValue) {
         visibility = newValue;
         mainTextBoxPanel.setVisible(visibility);
+        if(game.cowardEnding){
+            mainTextBoxPanel.setBounds(200,100,1080, 600);
+            mainText.setText("Something along your journey has scared you away from this quest. . . " +
+                    "\nYou flee the country in shame, never to return." +
+                    "\n\n\t\tCreated by:" +
+                    "\n\n\t\tDavid Francis" +
+                    "\n\t\tPaul Schmidt" +
+                    "\n\t\tSimon That" +
+                    "\n\t\tDevinn Wilson");
+        }
         mainButtonPanel.setVisible(visibility);
     }
     public class ExitHandler implements ActionListener{
