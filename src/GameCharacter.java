@@ -9,7 +9,7 @@ public class GameCharacter {
     int MaxHp;
     public int CurrentHp;
     String name, characterType;
-     int baseDamage;
+    int baseDamage;
 
     //Constructors
     public GameCharacter() {
@@ -27,16 +27,11 @@ public class GameCharacter {
     public GameCharacter (String selectedName) {
         new GameCharacter();
         this.name = selectedName;
-        this.characterType = selectedName;
     }
 
     //getName/setName method
     public String getName () {
         return name;
-    }
-
-    public String getCharacterType() {
-        return characterType;
     }
 
     //Stat Related Methods
@@ -54,6 +49,12 @@ public class GameCharacter {
     }
     public Integer getCurrentHP() {
         return CurrentHp;
+    }
+    public String getCharacterType(){
+        return characterType;
+    }
+    public void setCharacterType(String newType){
+        characterType = newType;
     }
     public void setMaxHP (int maxHp) {
         this.MaxHp = maxHp;

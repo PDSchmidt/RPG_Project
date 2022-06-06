@@ -14,7 +14,7 @@ public class Fighter extends PlayerCharacter{
         statModifiers.put("CHA", 0);
         name = "Fiedoor";
         MaxHp = 68;
-        baseDamage = randNum.nextInt(1, 7) + randNum.nextInt(1, 7)  + 2;
+        CurrentHp = MaxHp;
         characterType = "Fighter";
     }
     public Fighter(String selectedName) {
@@ -23,11 +23,14 @@ public class Fighter extends PlayerCharacter{
         characterType = "Fighter";
     }
     public void attack (GameCharacter target) {
-        if ((randNum.nextInt(1, 21) + getAbilityScore("STR")) >= (randNum.nextInt(1, 21) + target.getAbilityScore("STR"))) {
+        if ((randNum.nextInt(1, 21) + getAbilityScore("STR")) >= (randNum.nextInt(1, 21) + target.getAbilityScore("CON"))) {
+            baseDamage = randNum.nextInt(1, 7) + randNum.nextInt(1, 7)  + getAbilityScore("STR");
             target.setCurrentHp(target.getCurrentHP() - baseDamage);
             //You hit the target for "baseDamage" amount of damage
+            //You swing your sword galantly and strike (target.type) for (baseDamage) damage!
         } else {
             // Tell the player how stupid they are for missing.
+            // "You missed you bloody idiot"
         }
     }
 }

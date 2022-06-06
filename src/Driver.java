@@ -1,30 +1,30 @@
 public class Driver {
     public static void main(String[] args) {
 
-        GameCharacter stat = new GameCharacter();
-        System.out.println(stat.getStats());
-
-        GameCharacter Steven = new GameCharacter();
-        GameCharacter Alven = new GameCharacter();
-        Steven.attack(Alven);
-        System.out.println(Alven.getCurrentHP());
-        System.out.println("Yo, I'm testing this cod!!!!!!");
-
-        GameCharacter Nancy = new Fighter("Nancy Higgens");
-        System.out.println(Nancy.getName());
-
         //Character Type Testing
         Rogue rooze = new Rogue();
         Fighter fifi = new Fighter();
         Wizard wazup = new Wizard();
-        System.out.println(rooze.getName());
-        System.out.println(fifi.getStats());
-        System.out.println(wazup.getSpecificStat("Strength"));
+
+        Goblin gobels = new Goblin();
+        HobGoblin hobs = new HobGoblin();
+        HobgoblinCaptain cptHobs = new HobgoblinCaptain();
+        Princess warHobs = new Princess();
+
+        for (int i = 0; i < 5; i++) {
+            hobs.attack(fifi);
+
+        }
+        System.out.println();
+        for (int i = 0; i < 5; i++) {
+            fifi.attack(hobs);
+
+        }
 
         //FileScannerTest
         FileScanner SaveFile = new FileScanner();
 
         HobGoblin boss = new HobGoblin();
-        System.out.println(boss.baseDamage);
+        System.out.println("boss's base damage: " + boss.baseDamage);
     }
 }

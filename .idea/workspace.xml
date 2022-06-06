@@ -4,10 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f150d9c5-0a5b-4a81-8da9-d2e49512c1b3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/savefile3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/savefile3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameManager.java" afterDir="false" />
+    <list default="true" id="f150d9c5-0a5b-4a81-8da9-d2e49512c1b3" name="Changes" comment="First" />
+    <list id="3b419f17-a930-4caa-94ac-a20426bdf3df" name="Changes by Paul" comment="Changes by Paul">
+      <change beforePath="$PROJECT_DIR$/src/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Driver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameCharacter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameCharacter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HobGoblin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HobGoblin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HobgoblinCaptain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HobgoblinCaptain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NonPlayerCharacter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NonPlayerCharacter.java" afterDir="false" />
+    </list>
+    <list id="dd38de28-01f0-4c4f-bc63-95b4dec77b93" name="Changes by simon" comment="">
+      <change beforePath="$PROJECT_DIR$/src/Fighter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fighter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rogue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Wizard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Wizard.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,20 +41,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "full.screen.before.presentation.mode": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "editor.preferences.appearance"
   }
-}</component>
-  <component name="RunManager" selected="Application.GameManager">
+}]]></component>
+  <component name="RunManager" selected="Application.Driver">
     <configuration name="Driver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Driver" />
       <module name="RPG_Project" />
@@ -64,8 +72,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GameManager" />
         <item itemvalue="Application.Driver" />
+        <item itemvalue="Application.GameManager" />
       </list>
     </recent_temporary>
   </component>
@@ -146,42 +154,70 @@
       <option name="project" value="LOCAL" />
       <updated>1654465794819</updated>
     </task>
-    <task id="LOCAL-00010" summary="New Game Screen Completion, Credit Screen Implementation, Initial Village Implementation">
-      <created>1654484115804</created>
+    <task id="LOCAL-00010" summary="First">
+      <created>1654472302595</created>
       <option name="number" value="00010" />
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1654484115804</updated>
+      <updated>1654472302595</updated>
     </task>
-    <task id="LOCAL-00011" summary="New Game Screen Completion, Credit Screen Implementation, Initial Village Implementation">
-      <created>1654484550553</created>
+    <task id="LOCAL-00011" summary="First">
+      <created>1654474302481</created>
       <option name="number" value="00011" />
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
-      <updated>1654484550553</updated>
+      <updated>1654474302481</updated>
     </task>
-    <task id="LOCAL-00012" summary="New Game Screen Completion, Credit Screen Implementation, Initial Village Implementation">
-      <created>1654485566348</created>
+    <task id="LOCAL-00012" summary="First">
+      <created>1654481326087</created>
       <option name="number" value="00012" />
       <option name="presentableId" value="LOCAL-00012" />
       <option name="project" value="LOCAL" />
-      <updated>1654485566348</updated>
+      <updated>1654481326087</updated>
     </task>
-    <task id="LOCAL-00013" summary="New Game Screen Completion, Credit Screen Implementation, Initial Village Implementation">
-      <created>1654485797473</created>
+    <task id="LOCAL-00013" summary="First">
+      <created>1654482633855</created>
       <option name="number" value="00013" />
       <option name="presentableId" value="LOCAL-00013" />
       <option name="project" value="LOCAL" />
-      <updated>1654485797473</updated>
+      <updated>1654482633855</updated>
     </task>
-    <task id="LOCAL-00014" summary="New Game Screen Completion, Credit Screen Implementation, Initial Village Implementation">
-      <created>1654486024637</created>
+    <task id="LOCAL-00014" summary="First">
+      <created>1654483312326</created>
       <option name="number" value="00014" />
       <option name="presentableId" value="LOCAL-00014" />
       <option name="project" value="LOCAL" />
-      <updated>1654486024637</updated>
+      <updated>1654483312326</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="First">
+      <created>1654484693535</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1654484693535</updated>
+    </task>
+    <task id="LOCAL-00016" summary="First">
+      <created>1654486753770</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1654486753770</updated>
+    </task>
+    <task id="LOCAL-00017" summary="First">
+      <created>1654487438949</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1654487438949</updated>
+    </task>
+    <task id="LOCAL-00018" summary="First">
+      <created>1654494594425</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1654494594425</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,8 +235,9 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="First" />
     <MESSAGE value="New Game Screen Completion, Credit Screen Implementation, Initial Village Implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="New Game Screen Completion, Credit Screen Implementation, Initial Village Implementation" />
+    <MESSAGE value="First" />
+    <MESSAGE value="Changes by Paul" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes by Paul" />
   </component>
 </project>
