@@ -6,10 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="f150d9c5-0a5b-4a81-8da9-d2e49512c1b3" name="Changes" comment="First">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Driver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Fighter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fighter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NonPlayerCharacter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NonPlayerCharacter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Goblin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Goblin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HobgoblinWarlord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Princess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PlayerCharacter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PlayerCharacter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rogue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Wizard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Wizard.java" afterDir="false" />
+    </list>
+    <list id="3b419f17-a930-4caa-94ac-a20426bdf3df" name="Changes by Paul" comment="">
+      <change beforePath="$PROJECT_DIR$/src/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Driver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameCharacter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameCharacter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HobGoblin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HobGoblin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HobgoblinCaptain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HobgoblinCaptain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NonPlayerCharacter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NonPlayerCharacter.java" afterDir="false" />
     </list>
     <list id="dd38de28-01f0-4c4f-bc63-95b4dec77b93" name="Changes by simon" comment="">
       <change beforePath="$PROJECT_DIR$/src/Fighter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fighter.java" afterDir="false" />
@@ -34,22 +43,25 @@
   <component name="LineStatusTrackerManager">
     <file path="$PROJECT_DIR$/src/Rogue.java">
       <ranges>
-        <range start1="25" end1="26" start2="25" end2="26" changelist="dd38de28-01f0-4c4f-bc63-95b4dec77b93" />
-        <range start1="30" end1="30" start2="30" end2="31" changelist="f150d9c5-0a5b-4a81-8da9-d2e49512c1b3" />
-        <range start1="31" end1="32" start2="32" end2="33" changelist="f150d9c5-0a5b-4a81-8da9-d2e49512c1b3" />
+        <range start1="16" end1="17" start2="16" end2="18" changelist="f150d9c5-0a5b-4a81-8da9-d2e49512c1b3" />
+        <range start1="25" end1="26" start2="26" end2="28" changelist="dd38de28-01f0-4c4f-bc63-95b4dec77b93" />
+        <range start1="28" end1="28" start2="30" end2="32" changelist="dd38de28-01f0-4c4f-bc63-95b4dec77b93" />
+        <range start1="30" end1="31" start2="34" end2="35" changelist="f150d9c5-0a5b-4a81-8da9-d2e49512c1b3" />
       </ranges>
     </file>
     <file path="$PROJECT_DIR$/src/Fighter.java">
       <ranges>
-        <range start1="25" end1="26" start2="25" end2="26" changelist="dd38de28-01f0-4c4f-bc63-95b4dec77b93" />
-        <range start1="30" end1="30" start2="30" end2="31" changelist="f150d9c5-0a5b-4a81-8da9-d2e49512c1b3" />
+        <range start1="16" end1="17" start2="16" end2="17" changelist="f150d9c5-0a5b-4a81-8da9-d2e49512c1b3" />
+        <range start1="25" end1="26" start2="25" end2="27" changelist="dd38de28-01f0-4c4f-bc63-95b4dec77b93" />
+        <range start1="28" end1="28" start2="29" end2="30" changelist="f150d9c5-0a5b-4a81-8da9-d2e49512c1b3" />
+        <range start1="30" end1="31" start2="32" end2="33" changelist="f150d9c5-0a5b-4a81-8da9-d2e49512c1b3" />
       </ranges>
     </file>
-    <file path="$PROJECT_DIR$/src/Wizard.java">
+    <file path="$PROJECT_DIR$/src/Driver.java">
       <ranges>
-        <range start1="15" end1="15" start2="15" end2="17" changelist="dd38de28-01f0-4c4f-bc63-95b4dec77b93" />
-        <range start1="23" end1="24" start2="25" end2="26" changelist="dd38de28-01f0-4c4f-bc63-95b4dec77b93" />
-        <range start1="28" end1="28" start2="30" end2="31" changelist="f150d9c5-0a5b-4a81-8da9-d2e49512c1b3" />
+        <range start1="2" end1="14" start2="2" end2="2" changelist="f150d9c5-0a5b-4a81-8da9-d2e49512c1b3" />
+        <range start1="19" end1="22" start2="7" end2="22" changelist="f150d9c5-0a5b-4a81-8da9-d2e49512c1b3" />
+        <range start1="27" end1="28" start2="27" end2="28" changelist="3b419f17-a930-4caa-94ac-a20426bdf3df" />
       </ranges>
     </file>
   </component>
@@ -62,20 +74,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "full.screen.before.presentation.mode": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "editor.preferences.appearance"
   }
-}</component>
-  <component name="RunManager" selected="Application.GameManager">
+}]]></component>
+  <component name="RunManager" selected="Application.Driver">
     <configuration name="Driver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Driver" />
       <module name="RPG_Project" />
@@ -92,8 +105,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GameManager" />
         <item itemvalue="Application.Driver" />
+        <item itemvalue="Application.GameManager" />
       </list>
     </recent_temporary>
   </component>
@@ -223,7 +236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654486753770</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="First">
+      <created>1654487438949</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1654487438949</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

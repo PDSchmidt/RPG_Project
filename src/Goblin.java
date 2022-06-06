@@ -14,6 +14,7 @@ public class Goblin extends NonPlayerCharacter{
         statModifiers.put("WIS", -1);
         statModifiers.put("CHA", -1);
         MaxHp = 13;
+        CurrentHp = MaxHp;
         name = "Clulb";
         baseDamage = randNum.nextInt(1, 7) + 2;
     }

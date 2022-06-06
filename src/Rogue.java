@@ -14,7 +14,8 @@ public class Rogue extends PlayerCharacter{
         statModifiers.put("CHA", 2);
         name = "Rogesh";
         MaxHp = 54;
-        baseDamage = randNum.nextInt(1, 5) + randNum.nextInt(1, 7) + getAbilityScore("DEX");
+        CurrentHp = MaxHp;
+        //baseDamage = randNum.nextInt(1, 5) + randNum.nextInt(1, 7) + getAbilityScore("DEX");
         characterType = "Rogue";
     }
     public Rogue(String selectedName) {
@@ -28,7 +29,7 @@ public class Rogue extends PlayerCharacter{
             //You hit the target for "baseDamage" amount of damage
         } else {
             // Tell the player how stupid they are for missing.
-            System.out.println("You missed you bloody idiot");
+            //"You missed you bloody idiot"
         }
     }
 }

@@ -1,6 +1,6 @@
-public class HobgoblinWarlord extends NonPlayerCharacter{
-    public HobgoblinWarlord() {
-        //Warlord of the hobgoblins; skilled warriors who've taken leadership due to superior skills
+public class Princess extends NonPlayerCharacter{
+    public Princess() {
+        //Princess of the hobgoblins; skilled warriors who've taken leadership due to superior skills
         //Strategically minded & more skilled than most; around 7 ft tall.
         //Wear plate mail armor with leather/cloth padding underneath;
         //Warlord's color-scheme is blue with purple
@@ -18,7 +18,8 @@ public class HobgoblinWarlord extends NonPlayerCharacter{
         statModifiers.put("WIS", 0);
         statModifiers.put("CHA", 2);
         MaxHp = 90;
-        name = "Warlord Kruverg The Boar";
+        CurrentHp = MaxHp;
+        name = "Princess Gertrude";
         baseDamage = randNum.nextInt(1, 11) + 3;
     }
 }
