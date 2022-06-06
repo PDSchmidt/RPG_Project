@@ -7,9 +7,10 @@ public class DungeonEntrance extends Screen{
     JButton saveButton, exitButton, enterCaveButton, restButton;
     JPanel statusTextPanel;
     JLabel statusTextLabel;
-    CreditScreenHandler csHandler = new CreditScreenHandler();
+    CowardCreditScreenHandler csHandler = new CowardCreditScreenHandler();
     SaveGameHandler sgHandler = new SaveGameHandler();
     RestHandler rHandler = new RestHandler();
+    EnterDungeonHandler edHandler = new EnterDungeonHandler();
     public DungeonEntrance(String type, Container container, GameManager game) {
         super(type,container, game);
         mainTextBoxPanel.setBackground(Color.BLUE);
@@ -67,6 +68,7 @@ public class DungeonEntrance extends Screen{
         enterCaveButton.setForeground(Color.WHITE);
         enterCaveButton.setFont(buttonFont);
         enterCaveButton.setFocusPainted(false);
+        enterCaveButton.addActionListener(edHandler);
         mainButtonPanel.add(enterCaveButton);
 
 
@@ -83,8 +85,11 @@ public class DungeonEntrance extends Screen{
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            game.saveGame();
-            statusTextLabel.setText("GAME SAVED!");
+            try{game.saveGame();
+            statusTextLabel.setText("GAME SAVED!");}
+            catch(Exception f){
+                statusTextLabel.setText("ERROR");
+            }
         }
     }
     public class RestHandler implements ActionListener{
@@ -94,6 +99,14 @@ public class DungeonEntrance extends Screen{
             game.player.setCurrentHp(game.player.getMaxHp());
             statusTextLabel.setText("YOU FEEL RESTED! CURRENT HP: " + game.player.getCurrentHP() + "/" +
                     game.player.getMaxHp());
+        }
+    }
+    public class EnterDungeonHandler implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            updateVisibility(false);
+            game.changeScreen("roomOne");
         }
     }
 }

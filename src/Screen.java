@@ -8,7 +8,7 @@ public class Screen {
     GameManager game;
     String screenType,defaultText;
     boolean hasCombat, combatDone, visibility = false;
-    Queue<Character> monsters;
+    Queue<GameCharacter> monsters;
     Container con;
     //Fonts for all screens to access
     Font buttonFont = new Font("Times New Roman", Font.PLAIN, 24);
@@ -17,6 +17,8 @@ public class Screen {
     JPanel mainTextBoxPanel,mainButtonPanel;
     JTextArea mainText;
     Map<Integer,String> textMap;
+    JButton cowardCreditsButton;
+    CowardCreditScreenHandler ccHandler = new CowardCreditScreenHandler();
 
     public Screen(){
 
@@ -72,13 +74,70 @@ public class Screen {
     public void updateVisibility(boolean newValue){
         visibility = newValue;
     }
+    public class CowardCreditScreenHandler implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            game.cowardEnding = true;
+            updateVisibility(false);
+            game.changeScreen("creditScreen");
+        }
+    }
     public class CreditScreenHandler implements ActionListener{
 
         @Override
         public void actionPerformed(ActionEvent e) {
+            game.cowardEnding = false;
             updateVisibility(false);
             game.changeScreen("creditScreen");
         }
+    }
+    public class CampButtonHandler implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            updateVisibility(false);
+            game.changeScreen("dungeonEntrance");
+        }
+    }
+    public class FightButtonHandler implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            beginCombat();
+        }
+    }
+    public void beginCombat(){
+        while(!combatDone && game.player.getCurrentHP() > 0){
+            game.player.attack(monsters.peek());
+            if(monsters.peek().getCurrentHP() > 0){
+                monsters.add(monsters.remove());
+            }
+            else{
+                monsters.remove();
+            }
+            if(monsters.isEmpty()) {
+                combatDone = true;
+                updateAfterVictory();
+            }
+            for(GameCharacter monster : monsters){
+                monster.attack(game.player);
+                if(game.player.getCurrentHP() <= 0){
+                    updateText("The challenge was too great for you. . . you were defeated.");
+                    mainButtonPanel.removeAll();
+                    cowardCreditsButton = new JButton("SHAME");
+                    cowardCreditsButton.setFocusPainted(false);
+                    cowardCreditsButton.setForeground(Color.WHITE);
+                    cowardCreditsButton.setBackground(Color.BLACK);
+                    cowardCreditsButton.setFont(buttonFont);
+                    cowardCreditsButton.addActionListener(ccHandler);
+                    mainButtonPanel.add(cowardCreditsButton);
+                }
+            }
+        }
+    }
+    public void updateAfterVictory(){
+
     }
 
 

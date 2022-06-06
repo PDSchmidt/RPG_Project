@@ -8,13 +8,14 @@ import java.awt.*;
 public class TitleScreen extends Screen{
     JPanel adventureLogoPanel,buttonPanel,loadedPanel,continuePanel;
     JLabel title,loadedStatus;
-    JButton newAdventure,loadAdventure,continueButton;
+    JButton newAdventure,loadAdventure,continueButton,creditsButton;
     Font titleFont = new Font("Times New Roman", Font.PLAIN, 90);
 
 
     NewGameButtonHandler ngHandler = new NewGameButtonHandler();
     LoadGameButtonHandler lgHandler = new LoadGameButtonHandler();
     ContinueButtonHandler cbHandler = new ContinueButtonHandler();
+    CreditScreenHandler csHandler = new CreditScreenHandler();
 
     public TitleScreen(){
 
@@ -38,8 +39,8 @@ public class TitleScreen extends Screen{
 
         buttonPanel = new JPanel();
         buttonPanel.setBounds(540,400,200,100);
-        buttonPanel.setBackground(Color.BLUE);
-        buttonPanel.setLayout(new GridLayout(2,1));
+        buttonPanel.setBackground(Color.BLACK);
+        buttonPanel.setLayout(new GridLayout(3,1));
 
         newAdventure = new JButton("NEW");
         newAdventure.setBackground(Color.BLACK);
@@ -58,6 +59,14 @@ public class TitleScreen extends Screen{
         loadAdventure.addActionListener(lgHandler);
         //action listener
         buttonPanel.add(loadAdventure);
+
+        creditsButton = new JButton("CREDITS");
+        creditsButton.setBackground(Color.BLACK);
+        creditsButton.setForeground(Color.WHITE);
+        creditsButton.setFont(buttonFont);
+        creditsButton.setFocusPainted(false);
+        creditsButton.addActionListener(csHandler);
+        buttonPanel.add(creditsButton);
 
         loadedPanel = new JPanel();
         loadedPanel.setBounds(440,550,400,100);
@@ -147,15 +156,15 @@ public class TitleScreen extends Screen{
                 game.player = new Fighter();
             }
             game.player.name = scnr.next();
-            game.player.stats.put("Strength", scnr.nextInt());
-            game.player.stats.put("Dexterity", scnr.nextInt());
-            game.player.stats.put("Constitution", scnr.nextInt());
-            game.player.stats.put("Intelligence", scnr.nextInt());
-            game.player.stats.put("Wisdom", scnr.nextInt());
-            game.player.stats.put("Charisma", scnr.nextInt());
+            //game.player.stats.put("Strength", scnr.nextInt());
+            //game.player.stats.put("Dexterity", scnr.nextInt());
+            //game.player.stats.put("Constitution", scnr.nextInt());
+            //game.player.stats.put("Intelligence", scnr.nextInt());
+            //game.player.stats.put("Wisdom", scnr.nextInt());
+            //game.player.stats.put("Charisma", scnr.nextInt());
             game.player.setCurrentHp(scnr.nextInt());
             //need setters for setMaxHP and Name
-            game.player.setMaxHP(scnr.nextInt());
+            //game.player.setMaxHP(scnr.nextInt());
             loadedStatus.setText("LOADED " + game.player.getName() + " SUCCESSFULLY!");
             scnr.close();
 

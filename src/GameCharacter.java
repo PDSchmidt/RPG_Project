@@ -8,7 +8,7 @@ public class GameCharacter {
     Random randNum = new Random();
     int MaxHp;
     public int CurrentHp;
-    String name;
+    String name, characterType;
      int baseDamage;
 
     //Constructors
@@ -27,11 +27,16 @@ public class GameCharacter {
     public GameCharacter (String selectedName) {
         new GameCharacter();
         this.name = selectedName;
+        this.characterType = selectedName;
     }
 
     //getName/setName method
     public String getName () {
         return name;
+    }
+
+    public String getCharacterType() {
+        return characterType;
     }
 
     //Stat Related Methods
