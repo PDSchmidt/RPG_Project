@@ -1,14 +1,15 @@
+import java.util.Random;
 import java.util.Map;
 import java.util.TreeMap;
 
 public class GameCharacter {
     Map<String, Integer> stats = new TreeMap<String, Integer>();
-    private int MaxHp;
+    Map<String, Integer> statModifiers = new TreeMap<String, Integer>();
+    Random randNum = new Random();
+    int MaxHp;
     public int CurrentHp;
     String name;
-    private int baseDamage = 4;
-
-    String characterType;
+     int baseDamage;
 
     //Constructors
     public GameCharacter() {
@@ -21,7 +22,7 @@ public class GameCharacter {
         MaxHp = 12;
         CurrentHp = MaxHp;
         name = "Bilbo Swaggins";
-        characterType = "GameCharacter";
+        baseDamage = 4;
     }
     public GameCharacter (String selectedName) {
         new GameCharacter();
@@ -33,19 +34,12 @@ public class GameCharacter {
         return name;
     }
 
-    public String getCharacterType(){
-        return characterType;
-    }
-    public void setCharacterType(String type){
-        characterType = type;
-    }
-
     //Stat Related Methods
     public Map< String, Integer> getStats() {
         return stats;
     }
     public Integer getSpecificStat(String key) {
-        return stats.get(key);
+        return statModifiers.get(key);
     }
 
     //HP related methods
