@@ -1,4 +1,4 @@
-public class Wizard extends PlayerCharacter{
+public class Wizard extends PlayerCharacter {
     public Wizard() {
         stats.put("Strength", 8);
         stats.put("Dexterity", 10);
@@ -15,12 +15,14 @@ public class Wizard extends PlayerCharacter{
         name = "Wizzils";
         characterType = "Wizard";
     }
+
     public Wizard(String selectedName) {
         new Wizard();
         this.name = selectedName;
         characterType = "Wizard";
     }
-    public void attack (GameCharacter target) {
+
+    public void attack(GameCharacter target) {
         if ((randNum.nextInt(1, 21) + getAbilityScore("INT")) >= (randNum.nextInt(1, 21) + target.getAbilityScore("STR"))) {
             target.setCurrentHp(target.getCurrentHP() - baseDamage);
             //You hit the target for "baseDamage" amount of damage
@@ -28,4 +30,5 @@ public class Wizard extends PlayerCharacter{
             // Tell the player how stupid they are for missing.
         }
 
+    }
 }

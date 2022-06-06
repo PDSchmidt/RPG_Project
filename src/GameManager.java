@@ -76,6 +76,7 @@ public class GameManager {
             //writer.write("" + player.getSpecificStat("Charisma") + "\n");
             writer.write("" + player.getCurrentHP() + "\n");
             //writer.write("" + player.getMaxHp());
+            writer.flush();
             writer.close();
 
         }
