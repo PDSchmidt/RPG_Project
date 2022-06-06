@@ -18,6 +18,7 @@ public class HobgoblinCaptain extends NonPlayerCharacter{
         statModifiers.put("WIS", 0);
         statModifiers.put("CHA", 1);
         MaxHp = 40;
+        CurrentHp = MaxHp;
         name = "Captain Gozrer Bellow";
         baseDamage = randNum.nextInt(1, 7) + randNum.nextInt(1, 7)  + 2;
     }

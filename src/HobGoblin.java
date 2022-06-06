@@ -1,4 +1,4 @@
-public class HobGoblin extends GameCharacter{
+public class HobGoblin extends NonPlayerCharacter{
     public HobGoblin() {
         //Described as Foot-soldiers in the monster manual; bully/threaten goblins & use them as cannon-fauder.
         //HobGoblins are skilled warriors from martial culture; their average height are about 6ft.
@@ -18,6 +18,7 @@ public class HobGoblin extends GameCharacter{
         statModifiers.put("WIS", 0);
         statModifiers.put("CHA", -1);
         MaxHp = 17;
+        CurrentHp = MaxHp;
         name = "Golvog";
         baseDamage = randNum.nextInt(1, 9) + 1;
     }

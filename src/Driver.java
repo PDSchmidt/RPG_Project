@@ -25,6 +25,6 @@ public class Driver {
         FileScanner SaveFile = new FileScanner();
 
         HobGoblin boss = new HobGoblin();
-        System.out.println(boss.baseDamage);
+        System.out.println("boss's base damage: " + boss.baseDamage);
     }
 }

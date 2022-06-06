@@ -8,8 +8,8 @@ public class GameCharacter {
     Random randNum = new Random();
     int MaxHp;
     public int CurrentHp;
-    String name;
-     int baseDamage;
+    String name, characterType;
+    int baseDamage;
 
     //Constructors
     public GameCharacter() {
@@ -49,6 +49,12 @@ public class GameCharacter {
     }
     public Integer getCurrentHP() {
         return CurrentHp;
+    }
+    public String getCharacterType(){
+        return characterType;
+    }
+    public void setCharacterType(String newType){
+        characterType = newType;
     }
     public void setMaxHP (int maxHp) {
         this.MaxHp = maxHp;
