@@ -26,6 +26,7 @@ public class Wizard extends PlayerCharacter{
             //You hit the target for "baseDamage" amount of damage
         } else {
             // Tell the player how stupid they are for missing.
+            System.out.println("You missed you bloody idiot");
         }
     }
 }

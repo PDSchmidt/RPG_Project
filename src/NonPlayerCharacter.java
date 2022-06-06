@@ -6,14 +6,23 @@ public class NonPlayerCharacter extends GameCharacter{
             }
             else {
                 //Tell player that enemy is a stupid turd for missing
+                System.out.println("You missed you bloody idiot");
             }
         } else if (target instanceof Rogue) {
             if ((randNum.nextInt(1, 21) + target.getAbilityScore("DEX")) <= randNum.nextInt(1, 21) + getAbilityScore("STR")) {
                 target.setCurrentHp(target.getCurrentHP() - baseDamage);
             }
+            else {
+                //Tell player that enemy is a stupid turd for missing
+                System.out.println("You missed you bloody idiot");
+            }
         } else {
             if ((randNum.nextInt(1, 21) + target.getAbilityScore("INT")) <= randNum.nextInt(1, 21) + getAbilityScore("STR")) {
                 target.setCurrentHp(target.getCurrentHP() - baseDamage);
+            }
+            else {
+                //Tell player that enemy is a stupid turd for missing
+                System.out.println("You missed you bloody idiot");
             }
         }
     }
