@@ -1,10 +1,10 @@
 public class HobgoblinCaptain extends NonPlayerCharacter{
     public HobgoblinCaptain() {
-        //
+        //Hobgoblins who've reached the rank of capatian due to their martial prowess
         //HobGoblins are skilled warriors from martial culture; their average height are about 6ft.
-        //Wear Chain mail armor with leather/cloth padding underneath;
-        //Foot-soldier's color-scheme is red with black
-        //Probably should be used in pairs of 2
+        //Wear half-plate mail armor with leather/cloth padding underneath;
+        //Captain's color-scheme is blue with black
+        //Used as a singular enemy
         stats.put("Strength", 15);
         stats.put("Dexterity", 14);
         stats.put("Constitution", 14);
