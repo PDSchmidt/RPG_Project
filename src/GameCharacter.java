@@ -46,6 +46,7 @@ public class GameCharacter {
     public Integer getSpecificStat(String key) {
         return statModifiers.get(key);
     }
+    public Integer getAbilityScore(String key) { return statModifiers.get(key);}
 
     //HP related methods
     public Integer getMaxHp () {
