@@ -30,7 +30,7 @@ public class CreditScreen extends Screen{
         visibility = newValue;
         mainTextBoxPanel.setVisible(visibility);
         if(game.cowardEnding){
-            mainTextBoxPanel.setBounds(200,100,1080, 600);
+            mainTextBoxPanel.setBounds(200,100,1080, 400);
             mainText.setText("Something along your journey has scared you away from this quest. . . " +
                     "\nYou flee the country in shame, never to return." +
                     "\n\n\t\tCreated by:" +
