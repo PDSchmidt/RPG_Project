@@ -17,7 +17,7 @@ public class HobgoblinWarlord extends NonPlayerCharacter{
         statModifiers.put("INT", 2);
         statModifiers.put("WIS", 0);
         statModifiers.put("CHA", 2);
-        MaxHp = 113;
+        MaxHp = 90;
         name = "Warlord Kruverg The Boar";
         baseDamage = randNum.nextInt(1, 11) + 3;
     }

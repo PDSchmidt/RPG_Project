@@ -20,5 +20,12 @@ public class Wizard extends PlayerCharacter{
         this.name = selectedName;
         characterType = "Wizard";
     }
+    public void attack (GameCharacter target) {
+        if ((randNum.nextInt(1, 21) + getAbilityScore("INT")) >= (randNum.nextInt(1, 21) + target.getAbilityScore("STR"))) {
+            target.setCurrentHp(target.getCurrentHP() - baseDamage);
+            //You hit the target for "baseDamage" amount of damage
+        } else {
+            // Tell the player how stupid they are for missing.
+        }
 
 }
