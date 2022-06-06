@@ -27,5 +27,5 @@ public class Wizard extends PlayerCharacter{
         } else {
             // Tell the player how stupid they are for missing.
         }
-
+    }
 }

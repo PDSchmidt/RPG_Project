@@ -13,6 +13,8 @@ public class Rogue extends PlayerCharacter{
         statModifiers.put("WIS", 2);
         statModifiers.put("CHA", 2);
         name = "Rogesh";
+        MaxHp = 54;
+        baseDamage = randNum.nextInt(1, 5) + randNum.nextInt(1, 7) + getAbilityScore("DEX");
         characterType = "Rogue";
     }
     public Rogue(String selectedName) {

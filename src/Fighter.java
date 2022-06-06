@@ -14,7 +14,7 @@ public class Fighter extends PlayerCharacter{
         statModifiers.put("CHA", 0);
         name = "Fiedoor";
         MaxHp = 68;
-        baseDamage = randNum.nextInt(1, 7) + randNum.nextInt(1, 7)  + 2;
+        baseDamage = randNum.nextInt(1, 7) + randNum.nextInt(1, 7)  + getAbilityScore("STR");
         characterType = "Fighter";
     }
     public Fighter(String selectedName) {
