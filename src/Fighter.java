@@ -35,15 +35,15 @@ public class Fighter extends PlayerCharacter{
         CurrentHp = MaxHp;
         characterType = "Fighter";
     }
-    public void attack (GameCharacter target) {
+    public String attack (GameCharacter target) {
         if ((randNum.nextInt(1, 21) + getAbilityScore("STR")) >= (randNum.nextInt(1, 21) + target.getAbilityScore("CON"))) {
             baseDamage = randNum.nextInt(1, 7) + randNum.nextInt(1, 7)  + getAbilityScore("STR");
             target.setCurrentHp(target.getCurrentHP() - baseDamage);
             //You hit the target for "baseDamage" amount of damage
-            //You swing your sword galantly and strike (target.type) for (baseDamage) damage!
+            return "You swing your sword gallantly and strike " + target.getName() + " for " + baseDamage + "damage!";
         } else {
             // Tell the player how stupid they are for missing.
-            // "You missed you bloody idiot"
+            return "You missed you bloody idiot";
         }
     }
 }

@@ -59,8 +59,9 @@ public class GameCharacter {
     public void setMaxHP (int maxHp) {
         this.MaxHp = maxHp;
     }
-    public void attack (GameCharacter target) {
+    public String attack (GameCharacter target) {
         target.setCurrentHp(target.getCurrentHP() - baseDamage);
+        return "";
     }
     public void setCurrentHp (int newHp) {
         CurrentHp = newHp;

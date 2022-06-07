@@ -110,16 +110,13 @@ public class Screen {
         }
     }
     public void doCombat() throws InterruptedException {
-
         updateCombatButtons(true);
         con.repaint();
         con.revalidate();
         if(!combatDone && game.player.getCurrentHP() > 0){
-            game.player.attack(monsters.peek());
-
-            updateText(game.player.getName() + " attacked " + monsters.peek().getName());
+            String result = game.player.attack(monsters.peek()) + "\n";
             con.repaint();
-            //Thread.sleep(2000);
+            Thread.sleep(1000);
             if(monsters.peek().getCurrentHP() > 0){
                 monsters.add(monsters.remove());
             }
@@ -129,10 +126,10 @@ public class Screen {
             if(monsters.isEmpty()) {
                 combatDone = true;
                 updateAfterVictory();
-
+                return;
             }
             for(GameCharacter monster : monsters){
-                monster.attack(game.player);
+                result += monster.attack(game.player) + "\n";
                 if(game.player.getCurrentHP() <= 0){
                     updateText("The challenge was too great for you. . . you were defeated.");
                     mainButtonPanel.removeAll();
@@ -145,6 +142,7 @@ public class Screen {
                     mainButtonPanel.add(cowardCreditsButton);
                 }
             }
+            updateText(result);
         }
     }
 

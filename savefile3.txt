@@ -1,6 +1,6 @@
 Fighter
-McMuffin
-59
+Booboo
+51
 true
 false
 false
