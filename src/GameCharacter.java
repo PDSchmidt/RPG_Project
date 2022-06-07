@@ -29,7 +29,7 @@ public class GameCharacter {
         this.name = selectedName;
     }
 
-    //getName/setName method
+    //getName method
     public String getName () {
         return name;
     }
