@@ -1,6 +1,6 @@
 Wizard
 LERRROOOOOYYYY
-20
+48
 true
 true
 true
