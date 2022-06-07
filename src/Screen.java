@@ -116,7 +116,7 @@ public class Screen {
         if(!combatDone && game.player.getCurrentHP() > 0){
             String result = game.player.attack(monsters.peek()) + "\n";
             con.repaint();
-            Thread.sleep(1000);
+            //Thread.sleep(1000);
             if(monsters.peek().getCurrentHP() > 0){
                 monsters.add(monsters.remove());
             }

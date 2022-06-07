@@ -61,6 +61,8 @@ public class GameManager {
         screens.put("loadCharacterScreen",loadCharacterScreen);
         Screen creditScreen = new CreditScreen("creditScreen", con, this);
         screens.put("creditScreen",creditScreen);
+        Screen victoryScreen = new VictoryScreen("victoryScreen", con, this);
+        screens.put("victoryScreen",victoryScreen);
 
 
 

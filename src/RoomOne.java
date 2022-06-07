@@ -37,7 +37,6 @@ public class RoomOne extends Screen{
             fightButton.setFocusPainted(false);
             fightButton.addActionListener(fbHandler);
             mainButtonPanel.add(fightButton);
-
         }
         else{
             updateAfterVictory();
@@ -63,7 +62,7 @@ public class RoomOne extends Screen{
     public void updateAfterVictory() {
         combatDone = true;
         mainButtonPanel.removeAll();
-        updateText("You defeated the monsters in this room. Dare you to venture forth? Or will you return to" +
+        updateText("You defeated the monsters in this first room. Dare you to venture forth? Or will you return to" +
                 " to camp to rest and recoup?");
         campButton = new JButton("RETURN TO CAMP");
         campButton.setBackground(Color.BLACK);

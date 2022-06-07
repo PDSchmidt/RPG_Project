@@ -40,7 +40,7 @@ public class Fighter extends PlayerCharacter{
             baseDamage = randNum.nextInt(1, 7) + randNum.nextInt(1, 7)  + getAbilityScore("STR");
             target.setCurrentHp(target.getCurrentHP() - baseDamage);
             //You hit the target for "baseDamage" amount of damage
-            return "You swing your sword gallantly and strike " + target.getName() + " for " + baseDamage + "damage!";
+            return "You swing your sword gallantly and strike " + target.getName() + " for " + baseDamage + " damage!";
         } else {
             // Tell the player how stupid they are for missing.
             return "You missed you bloody idiot";

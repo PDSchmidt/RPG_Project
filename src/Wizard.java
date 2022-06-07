@@ -39,7 +39,7 @@ public class Wizard extends PlayerCharacter{
         //if ((randNum.nextInt(1, 21) + getAbilityScore("INT")) >= (randNum.nextInt(1, 21) + target.getAbilityScore("CON"))) {
         baseDamage = randNum.nextInt(2, 5) + getAbilityScore("INT");
         target.setCurrentHp(target.getCurrentHP() - baseDamage);
-        return "You sling your spell towards " + target.getName() + " for " + baseDamage + "damage!";
+        return "You sling your spell towards " + target.getName() + " for " + baseDamage + " damage!";
             //You hit the target for "baseDamage" amount of damage
             //You focus your mana and launch a radiant spell at (target.type) for (baseDamage) damage!
         //} else {

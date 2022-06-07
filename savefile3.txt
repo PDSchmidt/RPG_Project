@@ -1,7 +1,7 @@
-Fighter
-Booboo
-51
+Rogue
+Rubert
+54
 true
-false
-false
-false
+true
+true
+true

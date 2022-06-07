@@ -169,8 +169,14 @@ public class TitleScreen extends Screen{
             if (scnr.next().equals("true"))
                 game.screens.get("roomOne").updateAfterVictory();
             //if scnrnext true roomTwo.updateAfterVictory()
+            if (scnr.next().equals("true"))
+                game.screens.get("roomTwo").updateAfterVictory();
             //if scnrnext true roomThree.updateAfterVictory()
+            if (scnr.next().equals("true"))
+                game.screens.get("roomThree").updateAfterVictory();
             //if scnrnext true bossRoom.updateAfterVictory()
+            if (scnr.next().equals("true"))
+                game.screens.get("bossRoom").updateAfterVictory();
 
             loadedStatus.setText("LOADED " + game.player.getName() + " SUCCESSFULLY!");
             scnr.close();

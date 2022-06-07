@@ -7,11 +7,15 @@
     <list default="true" id="f150d9c5-0a5b-4a81-8da9-d2e49512c1b3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/savefile3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/savefile3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BossRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BossRoom.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Fighter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fighter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameCharacter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameCharacter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NonPlayerCharacter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NonPlayerCharacter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rogue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RoomOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RoomOne.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RoomThree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RoomThree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RoomTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RoomTwo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Screen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Screen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TitleScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TitleScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Wizard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Wizard.java" afterDir="false" />
     </list>
     <list id="3b419f17-a930-4caa-94ac-a20426bdf3df" name="Changes by Paul" comment="Changes by Paul" />
@@ -223,7 +227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654561390258</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Big update for groundwork integration of gui/attack">
+      <created>1654562778360</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1654562778360</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
