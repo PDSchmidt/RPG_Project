@@ -13,13 +13,13 @@ public class DungeonEntrance extends Screen{
     EnterDungeonHandler edHandler = new EnterDungeonHandler();
     public DungeonEntrance(String type, Container container, GameManager game) {
         super(type,container, game);
-        mainTextBoxPanel.setBackground(Color.BLUE);
-        mainText.setBackground(Color.BLUE);
+        mainTextBoxPanel.setBackground(Color.BLACK);
+        mainText.setBackground(Color.BLACK);
         mainTextBoxPanel.setBounds(100,100,1080,350);
 
         statusTextPanel = new JPanel();
         statusTextPanel.setBounds(100,450,1080,50);
-        statusTextPanel.setBackground(Color.GREEN);
+        statusTextPanel.setBackground(Color.BLACK);
         statusTextPanel.setForeground(Color.WHITE);
         statusTextPanel.setLayout(new GridLayout(1,1));
         statusTextPanel.setVisible(false);

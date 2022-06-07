@@ -8,7 +8,7 @@ public class VictoryScreen extends Screen{
         super(type,container,game);
         hasCombat = false;
         combatDone = true;
-        updateText("Unsure of how the news of the Princess's betrayal and demise will bet taken, you return to the King." +
+        updateText("Unsure of how the news of the Princess's betrayal and demise will be received, you return to the King." +
                 "\n\n\n\t\tKing: \"YOU DID WHAT?!?!?!\"" +
                 "\n\nNo matter what you say, no matter how you plead, the King will have none of it. You are thrown in to a dungeon" +
                 " for the rest of your life." +

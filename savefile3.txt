@@ -1,7 +1,7 @@
-Wizard
-LERRROOOOOYYYY
-48
-true
-true
-true
-true
+Fighter
+LEROY
+68
+false
+false
+false
+false
