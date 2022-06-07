@@ -17,8 +17,9 @@ public class Screen {
     JPanel mainTextBoxPanel,mainButtonPanel;
     JTextArea mainText;
     Map<Integer,String> textMap;
-    JButton cowardCreditsButton;
+    JButton cowardCreditsButton, continueCombatButton;
     CowardCreditScreenHandler ccHandler = new CowardCreditScreenHandler();
+
 
     public Screen(){
 
@@ -54,21 +55,18 @@ public class Screen {
 
         con.add(mainButtonPanel);
     }
-    public void doCombat(){
-        //Create Que of player + monsters
-        //while combat not done
-            //cycle through
-                //if this player, attack creature
-                    //if creature dead, combatDone = true
-
-                //else this creature, attack player
-                    //if player dead, back to village
-
-    }
     public void updateText(String newText){
-        mainText.setText(newText);
+        SwingUtilities.invokeLater(new Runnable() {
+
+            @Override
+            public void run() {
+                mainText.setText(newText);
+            }
+        });
+
     }
     public void setDefaultText(){
+
         mainText.setText(defaultText);
     }
     public void updateVisibility(boolean newValue){
@@ -104,12 +102,24 @@ public class Screen {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            beginCombat();
+            try {
+                doCombat();
+            } catch (InterruptedException ex) {
+                throw new RuntimeException(ex);
+            }
         }
     }
-    public void beginCombat(){
-        while(!combatDone && game.player.getCurrentHP() > 0){
+    public void doCombat() throws InterruptedException {
+
+        updateCombatButtons(true);
+        con.repaint();
+        con.revalidate();
+        if(!combatDone && game.player.getCurrentHP() > 0){
             game.player.attack(monsters.peek());
+
+            updateText(game.player.getName() + " attacked " + monsters.peek().getName());
+            con.repaint();
+            //Thread.sleep(2000);
             if(monsters.peek().getCurrentHP() > 0){
                 monsters.add(monsters.remove());
             }
@@ -119,6 +129,7 @@ public class Screen {
             if(monsters.isEmpty()) {
                 combatDone = true;
                 updateAfterVictory();
+
             }
             for(GameCharacter monster : monsters){
                 monster.attack(game.player);
@@ -136,6 +147,10 @@ public class Screen {
             }
         }
     }
+
+    public void updateCombatButtons(boolean b) {
+    }
+
     public void updateAfterVictory(){
 
     }

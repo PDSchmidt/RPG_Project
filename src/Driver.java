@@ -17,7 +17,7 @@ public class Driver {
         }
         System.out.println();
         for (int i = 0; i < 5; i++) {
-            fifi.attack(hobs);
+            wazup.attack(hobs);
 
         }
 

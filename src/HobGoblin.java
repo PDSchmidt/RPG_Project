@@ -21,5 +21,6 @@ public class HobGoblin extends NonPlayerCharacter{
         CurrentHp = MaxHp;
         name = "Golvog";
         baseDamage = randNum.nextInt(1, 9) + 1;
+        characterType = "HobGoblin";
     }
 }

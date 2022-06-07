@@ -19,8 +19,22 @@ public class Rogue extends PlayerCharacter{
         characterType = "Rogue";
     }
     public Rogue(String selectedName) {
-        new Rogue();
-        this.name = selectedName;
+        stats.put("Strength", 12);
+        stats.put("Dexterity", 18);
+        stats.put("Constitution", 14);
+        stats.put("Intelligence", 12);
+        stats.put("Wisdom", 14);
+        stats.put("Charisma", 14);
+        statModifiers.put("STR", 1);
+        statModifiers.put("DEX", 4);
+        statModifiers.put("CON", 2);
+        statModifiers.put("INT", 1);
+        statModifiers.put("WIS", 2);
+        statModifiers.put("CHA", 2);
+        name = selectedName;
+        MaxHp = 54;
+        CurrentHp = MaxHp;
+        //baseDamage = randNum.nextInt(1, 5) + randNum.nextInt(1, 7) + getAbilityScore("DEX");
         characterType = "Rogue";
     }
     public void attack (GameCharacter target) {

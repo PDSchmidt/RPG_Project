@@ -15,12 +15,12 @@ public class RoomOne extends Screen{
         combatDone = false;
         monsters = new LinkedList<GameCharacter>();
         monsters.add(new Goblin());
-        //monsters.add(new Goblin());
-        //monsters.add(new Goblin());
+        monsters.add(new Goblin());
+        monsters.add(new Goblin());
         if(!combatDone){
             updateText("You muster the strength to enter the cave. The inside is musty and pitch black. " +
                     "\nYou light a torch. As the flames illuminate this room, " + monsters.size() + " " +
-                    monsters.peek().getCharacterType() + "'s leap from the shadows!\n\n" +
+                    monsters.peek().getCharacterType() + "s leap from the shadows!\n\n" +
                     "\"Rrrrrroooaaagggghhhh!\" They attack!");
             retreatButton = new JButton("RETREAT TO CAVE ENTRANCE");
             retreatButton.setBackground(Color.BLACK);
@@ -61,6 +61,7 @@ public class RoomOne extends Screen{
 
     @Override
     public void updateAfterVictory() {
+        combatDone = true;
         mainButtonPanel.removeAll();
         updateText("You defeated the monsters in this room. Dare you to venture forth? Or will you return to" +
                 " to camp to rest and recoup?");
@@ -79,5 +80,12 @@ public class RoomOne extends Screen{
         nextRoomButton.setFocusPainted(false);
         nextRoomButton.addActionListener(nrHandler);
         mainButtonPanel.add(nextRoomButton);
+    }
+
+    @Override
+    public void updateCombatButtons(boolean b) {
+        if(b) {
+            fightButton.setText("CONTINUE");
+        }
     }
 }

@@ -1,3 +1,7 @@
 Fighter
-JJ
-12
+McMuffin
+59
+true
+false
+false
+false

@@ -165,6 +165,13 @@ public class TitleScreen extends Screen{
             game.player.setCurrentHp(scnr.nextInt());
             //need setters for setMaxHP and Name
             //game.player.setMaxHP(scnr.nextInt());
+
+            if (scnr.next().equals("true"))
+                game.screens.get("roomOne").updateAfterVictory();
+            //if scnrnext true roomTwo.updateAfterVictory()
+            //if scnrnext true roomThree.updateAfterVictory()
+            //if scnrnext true bossRoom.updateAfterVictory()
+
             loadedStatus.setText("LOADED " + game.player.getName() + " SUCCESSFULLY!");
             scnr.close();
 

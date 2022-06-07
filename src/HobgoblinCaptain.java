@@ -21,5 +21,6 @@ public class HobgoblinCaptain extends NonPlayerCharacter{
         CurrentHp = MaxHp;
         name = "Captain Gozrer Bellow";
         baseDamage = randNum.nextInt(1, 7) + randNum.nextInt(1, 7)  + 2;
+        characterType = "Hobgoblin Captain";
     }
 }

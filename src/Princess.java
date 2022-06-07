@@ -21,5 +21,6 @@ public class Princess extends NonPlayerCharacter{
         CurrentHp = MaxHp;
         name = "Princess Gertrude";
         baseDamage = randNum.nextInt(1, 11) + 3;
+        characterType = "Princess Gertrude";
     }
 }

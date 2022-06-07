@@ -13,7 +13,20 @@ public class GameManager {
     Container con;
     boolean cowardEnding;
     public static void main(String[] args){
-        GameManager game = new GameManager();
+        EventQueue.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    {
+                        GameManager game = new GameManager();
+                    }
+                } catch (Exception e) {
+
+                }
+            }
+
+        });
+
     }
     public void updateDisplayText(String newText){
 
@@ -76,6 +89,10 @@ public class GameManager {
             //writer.write("" + player.getSpecificStat("Charisma") + "\n");
             writer.write("" + player.getCurrentHP() + "\n");
             //writer.write("" + player.getMaxHp());
+            writer.write("" + screens.get("roomOne").combatDone + "\n");
+            writer.write("" + screens.get("roomTwo").combatDone + "\n");
+            writer.write("" + screens.get("roomThree").combatDone + "\n");
+            writer.write("" + screens.get("bossRoom").combatDone + "\n");
             writer.flush();
             writer.close();
 
