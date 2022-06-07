@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f150d9c5-0a5b-4a81-8da9-d2e49512c1b3" name="Changes" comment="First">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameCharacter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameCharacter.java" afterDir="false" />
-    </list>
+    <list default="true" id="f150d9c5-0a5b-4a81-8da9-d2e49512c1b3" name="Changes" comment="First" />
     <list id="3b419f17-a930-4caa-94ac-a20426bdf3df" name="Changes by Paul" comment="Changes by Paul" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +79,7 @@
       <workItem from="1654034313416" duration="3708000" />
       <workItem from="1654214509934" duration="1420000" />
       <workItem from="1654447647714" duration="19038000" />
+      <workItem from="1654640518655" duration="420000" />
     </task>
     <task id="LOCAL-00001" summary="First">
       <created>1653988196404</created>
@@ -244,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654571678777</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="First">
+      <created>1654640533420</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1654640533420</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,10 +268,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="New Game Screen Completion, Credit Screen Implementation, Initial Village Implementation" />
-    <MESSAGE value="First" />
     <MESSAGE value="Changes by Paul" />
     <MESSAGE value="Big update for groundwork integration of gui/attack" />
     <MESSAGE value="ALMOST DONE. NEED VICTORY SCREEN/GAME ENDING" />
-    <option name="LAST_COMMIT_MESSAGE" value="ALMOST DONE. NEED VICTORY SCREEN/GAME ENDING" />
+    <MESSAGE value="First" />
+    <option name="LAST_COMMIT_MESSAGE" value="First" />
   </component>
 </project>
