@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f150d9c5-0a5b-4a81-8da9-d2e49512c1b3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/savefile3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/savefile3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DungeonEntrance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DungeonEntrance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VictoryScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VictoryScreen.java" afterDir="false" />
     </list>
     <list id="3b419f17-a930-4caa-94ac-a20426bdf3df" name="Changes by Paul" comment="Changes by Paul" />
     <list id="dd38de28-01f0-4c4f-bc63-95b4dec77b93" name="Changes by simon" comment="" />
@@ -254,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654571775883</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="ALMOST DONE. NEED VICTORY SCREEN/GAME ENDING">
+      <created>1654573440277</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1654573440277</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
