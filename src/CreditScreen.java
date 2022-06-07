@@ -10,7 +10,6 @@ public class CreditScreen extends Screen{
         super(type, container, game);
         mainTextBoxPanel.setBounds(540, 100, 400,400);
         mainText.setText("Created by:" +
-                "\n\nDavid Francis" +
                 "\nPaul Schmidt" +
                 "\nSimon That" +
                 "\nDevinn Wilson");
@@ -34,7 +33,6 @@ public class CreditScreen extends Screen{
             mainText.setText("Something along your journey has scared you away from this quest. . . " +
                     "\nYou flee the country in shame, never to return." +
                     "\n\n\t\tCreated by:" +
-                    "\n\n\t\tDavid Francis" +
                     "\n\t\tPaul Schmidt" +
                     "\n\t\tSimon That" +
                     "\n\t\tDevinn Wilson");
