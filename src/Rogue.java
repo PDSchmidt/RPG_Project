@@ -36,6 +36,7 @@ public class Rogue extends PlayerCharacter{
         CurrentHp = MaxHp;
         characterType = "Rogue";
     }
+    //Override of attack method of GameCharacter to implement how the Rogue Class does combat
     public String attack (GameCharacter target) {
         int first = randNum.nextInt(1,21);
         int second = randNum.nextInt(1,21);

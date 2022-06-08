@@ -67,7 +67,7 @@ public class Screen {
     public void updateVisibility(boolean newValue){
         visibility = newValue;
     }
-
+    //method for managing combat in a Screen using the game.player and the QUEUE associated with each Screen
     public void doCombat() throws InterruptedException {
         updateCombatButtons(true);
         con.repaint();

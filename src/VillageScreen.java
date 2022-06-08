@@ -3,12 +3,11 @@ import java.awt.event.ActionListener;
 import java.util.*;
 import javax.swing.*;
 import java.awt.*;
+//Beginning of game where you can accept or quest or go to the credits screen
 public class VillageScreen extends Screen{
     int displayTextCount;
     JButton continueButton;
-
     ContinueButtonHandler cbHandler = new ContinueButtonHandler();
-
     public VillageScreen(String type, Container container, GameManager game) {
         super(type,container,game);
         displayTextCount = 0;
@@ -44,7 +43,6 @@ public class VillageScreen extends Screen{
         updateText(textMap.get(displayTextCount));
         displayTextCount++;
     }
-
     @Override
     public void updateVisibility(boolean newValue) {
         super.updateVisibility(newValue);

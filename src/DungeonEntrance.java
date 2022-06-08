@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+//Entrance to the dungeon Screen
 public class DungeonEntrance extends Screen{
     JButton saveButton, exitButton, enterCaveButton, restButton;
     JPanel statusTextPanel;
@@ -37,7 +37,6 @@ public class DungeonEntrance extends Screen{
                 "\n   You may return to your camp to rest while you are not in danger." +
                 "\n   You can re-enter the cave after resting." +
                 "\n\n   What would you like to do?");
-
         //buttons
         exitButton = new JButton("FLEE");
         exitButton.setBackground(Color.BLACK);

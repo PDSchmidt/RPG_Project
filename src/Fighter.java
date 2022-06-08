@@ -35,6 +35,7 @@ public class Fighter extends PlayerCharacter{
         CurrentHp = MaxHp;
         characterType = "Fighter";
     }
+    //Override of attack method of GameCharacter to implement how the Fighter Class does combat
     public String attack (GameCharacter target) {
         if ((randNum.nextInt(1, 21) + getAbilityScore("STR")) >= (randNum.nextInt(1, 21) + target.getAbilityScore("CON"))) {
             baseDamage = randNum.nextInt(1, 7) + randNum.nextInt(1, 7)  + getAbilityScore("STR");

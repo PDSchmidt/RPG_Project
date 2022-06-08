@@ -130,6 +130,7 @@ public class NewCharacterScreen extends Screen{
             game.changeScreen("titleScreen");
         }
     }
+    //Sets the chosenTypeLabel to the class the character is choosing
     public class WizardButtonHandler implements ActionListener{
 
         @Override
@@ -157,6 +158,7 @@ public class NewCharacterScreen extends Screen{
             con.repaint();
         }
     }
+    //Uses the nameField and chosenTypeLabel to create the appropriate Object with the chosen character's name
     public class CreateButtonHandler implements ActionListener{
 
         @Override

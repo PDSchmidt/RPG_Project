@@ -1,6 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
-
+//Last Screen in game in which you can break the bad news to the king or flee the country
 public class VictoryScreen extends Screen{
     JButton continueButton;
     CreditScreenHandler csHandler = new CreditScreenHandler();

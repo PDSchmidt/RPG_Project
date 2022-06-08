@@ -35,6 +35,7 @@ public class Wizard extends PlayerCharacter{
         CurrentHp = MaxHp;
         characterType = "Wizard";
     }
+    //Override of attack method of GameCharacter to implement how the Wizard Class does combat
     public String attack (GameCharacter target) {
         baseDamage = randNum.nextInt(1, 5)*2 + getAbilityScore("INT");
         target.setCurrentHp(target.getCurrentHP() - baseDamage);

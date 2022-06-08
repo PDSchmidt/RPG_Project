@@ -6,8 +6,6 @@ import java.awt.*;
 
 public class GameManager {
     GameCharacter player;
-
-
     Map<String,Screen> screens;
     JFrame mainWindow;
     Container con;
@@ -35,7 +33,6 @@ public class GameManager {
         mainWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         mainWindow.getContentPane().setBackground(Color.BLACK);
         mainWindow.setLayout(null);
-
         con = mainWindow.getContentPane();
 
         //Build different screens in game
@@ -59,20 +56,18 @@ public class GameManager {
         Screen victoryScreen = new VictoryScreen("victoryScreen", con, this);
         screens.put("victoryScreen",victoryScreen);
 
-
-
-
-
-
+        //Turn on window, seting the TitleScreen to be the first Screen visible
         titleScreen.updateVisibility(true);
         mainWindow.setVisible(true);
         con.repaint();
 
 
     }
+    //Public method that other screens/action listeners can call to tell the GameManager to turn the GUI on of a specific Screen
     public void changeScreen(String displayScreen){
         screens.get(displayScreen).updateVisibility(true);
     }
+    //Saves the gamestate of the player's character and whether the rooms with combat are cleared or not
     public void saveGame(){
         try{
             FileWriter writer = new FileWriter("savefile3.txt",false);

@@ -1,4 +1,5 @@
 public class NonPlayerCharacter extends GameCharacter{
+    //Attack method for the NPCs to attack the player
     public String attack (GameCharacter target) {
         if (this instanceof Goblin){
             baseDamage = randNum.nextInt(1, 7) + 2;

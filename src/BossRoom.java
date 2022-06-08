@@ -5,11 +5,14 @@ import java.awt.event.ActionListener;
 import java.util.HashMap;
 import java.util.LinkedList;
 
+//Final boss Screen/Area
 public class BossRoom extends Screen{
+    //Swing buttons and EventHandlers
     JButton fightButton, fleeButton, nextRoomButton, continueButton;
     FightButtonHandler fbHandler = new FightButtonHandler();
     NextRoomHandler nrHandler = new NextRoomHandler();
     ContinueButtonHandler continueHandler = new ContinueButtonHandler();
+    //int counter for updating final boss monologue
     int displayTextCount;
     public BossRoom(String type, Container container, GameManager game) {
         super(type,container,game);
@@ -19,6 +22,8 @@ public class BossRoom extends Screen{
         monsters.add(new Princess());
         displayTextCount = 0;
 
+        //Integer, String map that stores different dialogue to update in the GUI based on Button clicks, tracked in
+        //the relevant event handler and stored in the class
         textMap = new HashMap<Integer,String>();
         textMap.put(0,"As you enter the boss chamber, you notice that there is no one present. " +
                 "All that resides inside is an empty throne covered in gold. Unexpectedly, the chamber door closes itself " +
@@ -31,6 +36,8 @@ public class BossRoom extends Screen{
                 "\n\nYou: \"What's going on here? Your father sent me here to save you!\"" +
                 "\n\nPrincess Gertrude: \"I'll tell you if you manage to defeat me!\"" +
                 "\n\nShe leaps out of the throne and rushes towards you, drawing a sinister blade.");
+
+        //If the player hasn't cleared this room yet, set the default text and buttons
         if (!combatDone) {
             updateText("You enter a small chamber at the end of this cave. You see a woman with " +
                     "brown hair who smiles at you warmly. She looks a bit distraught.\n" +
@@ -48,15 +55,47 @@ public class BossRoom extends Screen{
             mainButtonPanel.add(continueButton);
             continueButton.addActionListener(continueHandler);
         }
+        //if they have cleared this room, construct it with the appropriate GUI
         else{
             updateAfterVictory();
         }
     }
+    //Specific instructions for updating the GUI of this Screen either on or off
     public void updateVisibility(boolean newValue) {
         visibility = newValue;
         mainTextBoxPanel.setVisible(visibility);
         mainButtonPanel.setVisible(visibility);
     }
+    //Update the GUI with different buttons/text if the player has won
+    public void updateAfterVictory() {
+        combatDone = true;
+        mainButtonPanel.removeAll();
+        updateText("\t\tWell that was awkward.\n\n" +
+                "Will you return to the King and relay the unfortunate news? " +
+                "Who knows if they'll believe you. . .");
+        fleeButton = new JButton("FLEE THE KINGDOM");
+        fleeButton.setBackground(Color.BLACK);
+        fleeButton.setForeground(Color.WHITE);
+        fleeButton.setFont(buttonFont);
+        fleeButton.setFocusPainted(false);
+        fleeButton.addActionListener(ccHandler);
+        mainButtonPanel.add(fleeButton);
+
+        nextRoomButton = new JButton("RETURN TO KING");
+        nextRoomButton.setBackground(Color.BLACK);
+        nextRoomButton.setForeground(Color.WHITE);
+        nextRoomButton.setFont(buttonFont);
+        nextRoomButton.setFocusPainted(false);
+        nextRoomButton.addActionListener(nrHandler);
+        mainButtonPanel.add(nextRoomButton);
+    }
+    @Override
+    public void updateCombatButtons(boolean b) {
+        if(b) {
+            fightButton.setText("CONTINUE");
+        }
+    }
+    //Action Event listeners
     public class NextRoomHandler implements ActionListener {
 
         @Override
@@ -83,35 +122,6 @@ public class BossRoom extends Screen{
                 fightButton.addActionListener(fbHandler);
                 mainButtonPanel.add(fightButton);
             }
-        }
-    }
-    public void updateAfterVictory() {
-        combatDone = true;
-        mainButtonPanel.removeAll();
-        updateText("\t\tWell that was awkward.\n\n" +
-                "Will you return to the King and relay the unfortunate news? " +
-                "Who knows if they'll believe you. . .");
-        fleeButton = new JButton("FLEE THE KINGDOM");
-        fleeButton.setBackground(Color.BLACK);
-        fleeButton.setForeground(Color.WHITE);
-        fleeButton.setFont(buttonFont);
-        fleeButton.setFocusPainted(false);
-        fleeButton.addActionListener(ccHandler);
-        mainButtonPanel.add(fleeButton);
-
-        nextRoomButton = new JButton("RETURN TO KING");
-        nextRoomButton.setBackground(Color.BLACK);
-        nextRoomButton.setForeground(Color.WHITE);
-        nextRoomButton.setFont(buttonFont);
-        nextRoomButton.setFocusPainted(false);
-        nextRoomButton.addActionListener(nrHandler);
-        mainButtonPanel.add(nextRoomButton);
-    }
-
-    @Override
-    public void updateCombatButtons(boolean b) {
-        if(b) {
-            fightButton.setText("CONTINUE");
         }
     }
 }

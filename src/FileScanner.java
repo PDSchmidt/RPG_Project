@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
-
+//FileScanner class for use in the testing class "Driver"
 public class FileScanner {
     String txtFile = null;
     Scanner scnr;
@@ -18,8 +18,4 @@ public class FileScanner {
         }
         return txtFile;
     }
-
-    //Scanner Object
-
-
 }

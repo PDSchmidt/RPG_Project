@@ -14,9 +14,11 @@ public class RoomThree extends Screen{
         hasCombat = true;
         combatDone = false;
         monsters = new LinkedList<GameCharacter>();
+        //Create a que of HobGoblins to represent the creatures in this room and use for the doCombat() method in the Screen class
         monsters.add(new HobGoblin());
         monsters.add(new HobGoblin());
         monsters.add(new HobgoblinCaptain());
+        //If the character hasn't cleared this room, construct it with default text
         if (!combatDone) {
             updateText("Haggard, but not dissuaded by the challenges thus far, you press forward." +
                     "\nA larger room lays just ahead. As the flames illuminate this room, " + monsters.size() + " " +
@@ -38,6 +40,7 @@ public class RoomThree extends Screen{
             fightButton.addActionListener(fbHandler);
             mainButtonPanel.add(fightButton);
         }
+        //Otherwise, construct the room with the appropriate text and buttons reflecting that the player has cleared this room
         else{
             updateAfterVictory();
         }
@@ -47,14 +50,6 @@ public class RoomThree extends Screen{
         visibility = newValue;
         mainTextBoxPanel.setVisible(visibility);
         mainButtonPanel.setVisible(visibility);
-    }
-    public class NextRoomHandler implements ActionListener {
-
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            updateVisibility(false);
-            game.changeScreen("bossRoom");
-        }
     }
     public void updateAfterVictory() {
         combatDone = true;
@@ -79,11 +74,18 @@ public class RoomThree extends Screen{
         nextRoomButton.addActionListener(nrHandler);
         mainButtonPanel.add(nextRoomButton);
     }
-
     @Override
     public void updateCombatButtons(boolean b) {
         if(b) {
             fightButton.setText("CONTINUE");
+        }
+    }
+    public class NextRoomHandler implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            updateVisibility(false);
+            game.changeScreen("bossRoom");
         }
     }
 }

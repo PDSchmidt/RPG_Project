@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+//End Screen for the game
 public class CreditScreen extends Screen{
     JButton exit;
     ExitHandler eHandler = new ExitHandler();
@@ -23,7 +23,7 @@ public class CreditScreen extends Screen{
         mainButtonPanel.add(exit);
 
     }
-
+    //Instructions for turning on/off the GUI based on whether the player is getting the coward ending or regular credits
     @Override
     public void updateVisibility(boolean newValue) {
         visibility = newValue;

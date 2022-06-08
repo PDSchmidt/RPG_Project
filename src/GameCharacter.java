@@ -1,7 +1,7 @@
 import java.util.Random;
 import java.util.Map;
 import java.util.TreeMap;
-
+//Base Class for all generic GameCharacter Objects/Classes
 public class GameCharacter {
     Map<String, Integer> stats = new TreeMap<String, Integer>();
     Map<String, Integer> statModifiers = new TreeMap<String, Integer>();
@@ -28,7 +28,10 @@ public class GameCharacter {
         new GameCharacter();
         this.name = selectedName;
     }
-
+    public String attack (GameCharacter target) {
+        target.setCurrentHp(target.getCurrentHP() - baseDamage);
+        return "";
+    }
     //getName/setName method
     public String getName () {
         return name;
@@ -53,17 +56,13 @@ public class GameCharacter {
     public String getCharacterType(){
         return characterType;
     }
+    public void setCurrentHp (int newHp) {
+        CurrentHp = newHp;
+    }
     public void setCharacterType(String newType){
         characterType = newType;
     }
     public void setMaxHP (int maxHp) {
         this.MaxHp = maxHp;
-    }
-    public String attack (GameCharacter target) {
-        target.setCurrentHp(target.getCurrentHP() - baseDamage);
-        return "";
-    }
-    public void setCurrentHp (int newHp) {
-        CurrentHp = newHp;
     }
 }

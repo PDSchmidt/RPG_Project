@@ -13,10 +13,12 @@ public class RoomTwo extends Screen{
         super(type, container, game);
         hasCombat = true;
         combatDone = false;
+        //Create a que of HobGoblins to represent the creatures in this room and use for the doCombat() method in the Screen class
         monsters = new LinkedList<GameCharacter>();
         monsters.add(new HobGoblin());
         monsters.add(new HobGoblin());
         monsters.add(new HobGoblin());
+        //If the character hasn't cleared this room, construct it with default text
         if (!combatDone) {
             updateText("After some time navigating some twists and turns, you find yourself in " +
                     "another chamber of this cave. The air is stagnant." +
@@ -39,6 +41,7 @@ public class RoomTwo extends Screen{
             fightButton.addActionListener(fbHandler);
             mainButtonPanel.add(fightButton);
         }
+        //Otherwise, construct the room with the appropriate text and buttons reflecting that the player has cleared this room
         else{
             updateAfterVictory();
         }
@@ -47,14 +50,6 @@ public class RoomTwo extends Screen{
         visibility = newValue;
         mainTextBoxPanel.setVisible(visibility);
         mainButtonPanel.setVisible(visibility);
-    }
-    public class NextRoomHandler implements ActionListener {
-
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            updateVisibility(false);
-            game.changeScreen("roomThree");
-        }
     }
     public void updateAfterVictory() {
         combatDone = true;
@@ -77,11 +72,18 @@ public class RoomTwo extends Screen{
         nextRoomButton.addActionListener(nrHandler);
         mainButtonPanel.add(nextRoomButton);
     }
-
     @Override
     public void updateCombatButtons(boolean b) {
         if(b) {
             fightButton.setText("CONTINUE");
+        }
+    }
+    public class NextRoomHandler implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            updateVisibility(false);
+            game.changeScreen("roomThree");
         }
     }
 }

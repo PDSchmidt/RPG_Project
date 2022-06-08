@@ -5,13 +5,12 @@ import java.io.FileNotFoundException;
 import java.util.*;
 import javax.swing.*;
 import java.awt.*;
+//Title Screen of game that gives you the option to see credits, or to load or create a new character
 public class TitleScreen extends Screen{
     JPanel adventureLogoPanel,buttonPanel,loadedPanel,continuePanel;
     JLabel title,loadedStatus;
     JButton newAdventure,loadAdventure,continueButton,creditsButton;
     Font titleFont = new Font("Times New Roman", Font.PLAIN, 90);
-
-
     NewGameButtonHandler ngHandler = new NewGameButtonHandler();
     LoadGameButtonHandler lgHandler = new LoadGameButtonHandler();
     ContinueButtonHandler cbHandler = new ContinueButtonHandler();
@@ -115,6 +114,7 @@ public class TitleScreen extends Screen{
         updateVisibility(false);
         game.changeScreen("newCharacterScreen");
     }
+    //Loads in the information to create a game player with the correct Class choice, name, and state of the four combat Screens
     private void loadGame() {
         try {
             Scanner scnr = new Scanner(new File("savefile3.txt"));

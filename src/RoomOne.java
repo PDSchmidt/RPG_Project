@@ -3,7 +3,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.*;
-
+//First room in the dungeon
 public class RoomOne extends Screen{
     JButton retreatButton, fightButton, campButton, nextRoomButton;
     CampButtonHandler cbHandler = new CampButtonHandler();
@@ -13,10 +13,12 @@ public class RoomOne extends Screen{
         super(type,container, game);
         hasCombat = true;
         combatDone = false;
+        //Create a que of Goblins to represent the creatures in this room and use for the doCombat() method in the Screen class
         monsters = new LinkedList<GameCharacter>();
         monsters.add(new Goblin());
         monsters.add(new Goblin());
         monsters.add(new Goblin());
+        //If the character hasn't cleared this room, construct it with default text
         if(!combatDone){
             updateText("You muster the strength to enter the cave. The inside is musty and pitch black. " +
                     "\nYou light a torch. As the flames illuminate this room, " + monsters.size() + " " +
@@ -38,6 +40,7 @@ public class RoomOne extends Screen{
             fightButton.addActionListener(fbHandler);
             mainButtonPanel.add(fightButton);
         }
+        //Otherwise, construct the room with the appropriate text and buttons reflecting that the player has cleared this room
         else{
             updateAfterVictory();
         }
@@ -49,15 +52,6 @@ public class RoomOne extends Screen{
         mainTextBoxPanel.setVisible(visibility);
         mainButtonPanel.setVisible(visibility);
     }
-    public class NextRoomHandler implements ActionListener{
-
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            updateVisibility(false);
-            game.changeScreen("roomTwo");
-        }
-    }
-
     @Override
     public void updateAfterVictory() {
         combatDone = true;
@@ -80,11 +74,18 @@ public class RoomOne extends Screen{
         nextRoomButton.addActionListener(nrHandler);
         mainButtonPanel.add(nextRoomButton);
     }
-
     @Override
     public void updateCombatButtons(boolean b) {
         if(b) {
             fightButton.setText("CONTINUE");
+        }
+    }
+    public class NextRoomHandler implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            updateVisibility(false);
+            game.changeScreen("roomTwo");
         }
     }
 }
