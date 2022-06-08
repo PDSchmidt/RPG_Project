@@ -20,7 +20,6 @@ public class NonPlayerCharacter extends GameCharacter{
                 return "The " + this.getCharacterType() + " attacked you, dealing " + baseDamage + " points of damage!";
             }
             else {
-                //Tell player that enemy is a stupid turd for missing
                 //The enemy tries to attack you but misses like a bafoon!
                 return "The " + this.getCharacterType() + " tries to attack you but misses like a buffoon!";
             }
@@ -31,7 +30,6 @@ public class NonPlayerCharacter extends GameCharacter{
                 return "The " + this.getCharacterType() + " attacked you, dealing " + baseDamage + " points of damage!";
             }
             else {
-                //Tell player that enemy is a stupid turd for missing
                 //The enemy tries to attack you but misses like a bafoon!
                 return "The " + this.getCharacterType() + " tries to attack you but misses like a buffoon!";
             }
@@ -42,7 +40,6 @@ public class NonPlayerCharacter extends GameCharacter{
                 return "The " + this.getCharacterType() + " attacked you, dealing " + baseDamage + " points of damage!";
             }
             else {
-                //Tell player that enemy is a stupid turd for missing
                 //The enemy tries to attack you but misses like a bafoon!
                 return "The " + this.getCharacterType() + " tries to attack you but misses like a buffoon!";
             }

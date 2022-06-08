@@ -13,7 +13,6 @@ public class VillageScreen extends Screen{
         super(type,container,game);
         displayTextCount = 0;
 
-
         continueButton = new JButton("CONTINUE");
         continueButton.setBackground(Color.BLACK);
         continueButton.setForeground(Color.WHITE);

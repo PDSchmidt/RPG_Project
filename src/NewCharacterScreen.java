@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 public class NewCharacterScreen extends Screen{
     String chosenTypeLabel = "";
+    boolean newCharacterCreated = false;
     JPanel textDisplayPanel, optionButtonPanel, startAdventurePanel;
     JLabel testLabel;
 
@@ -52,7 +53,6 @@ public class NewCharacterScreen extends Screen{
         wizardButton.setForeground(Color.WHITE);
         wizardButton.setFont(buttonFont);
         wizardButton.setFocusPainted(false);
-        //action listener
         wizardButton.addActionListener(wbHandler);
         optionButtonPanel.add(wizardButton);
 
@@ -62,7 +62,6 @@ public class NewCharacterScreen extends Screen{
         rogueButton.setForeground(Color.WHITE);
         rogueButton.setFont(buttonFont);
         rogueButton.setFocusPainted(false);
-        //action listener
         rogueButton.addActionListener(rbHandler);
         optionButtonPanel.add(rogueButton);
 
@@ -72,7 +71,6 @@ public class NewCharacterScreen extends Screen{
         fighterButton.setForeground(Color.WHITE);
         fighterButton.setFont(buttonFont);
         fighterButton.setFocusPainted(false);
-        //action listener
         fighterButton.addActionListener(fbHandler);
         optionButtonPanel.add(fighterButton);
 
@@ -82,7 +80,6 @@ public class NewCharacterScreen extends Screen{
         createButton.setForeground(Color.WHITE);
         createButton.setFont(buttonFont);
         createButton.setFocusPainted(false);
-        //action listener
         createButton.addActionListener(cbHandler);
         optionButtonPanel.add(createButton);
 
@@ -92,11 +89,8 @@ public class NewCharacterScreen extends Screen{
         backButton.setForeground(Color.WHITE);
         backButton.setFont(buttonFont);
         backButton.setFocusPainted(false);
-        //action listener
         backButton.addActionListener(bbHandler);
         optionButtonPanel.add(backButton);
-
-
 
         startAdventurePanel = new JPanel();
         startAdventurePanel.setBounds(880,475,300,50);
@@ -109,17 +103,8 @@ public class NewCharacterScreen extends Screen{
         startAdventureButton.setForeground(Color.WHITE);
         startAdventureButton.setFont(buttonFont);
         startAdventureButton.setFocusPainted(false);
-        //action listener
         startAdventureButton.addActionListener(saHandler);
         startAdventurePanel.add(startAdventureButton);
-
-
-
-
-
-
-
-
 
         textDisplayPanel.setVisible(false);
         optionButtonPanel.setVisible(false);
@@ -133,7 +118,7 @@ public class NewCharacterScreen extends Screen{
         textDisplayPanel.setVisible(visibility);
         optionButtonPanel.setVisible(visibility);
         startAdventurePanel.setVisible(false);
-        if(game.player != null)
+        if(newCharacterCreated)
             startAdventurePanel.setVisible(visibility);
 
     }
@@ -179,19 +164,22 @@ public class NewCharacterScreen extends Screen{
             if(chosenTypeLabel.equals("Rogue")){
                 game.player = new Rogue(nameField.getText());
                 testLabel.setText("You created a Rogue! Their name is: " + game.player.getName());
+                newCharacterCreated = true;
             }
             else if(chosenTypeLabel.equals("Wizard")){
                 game.player = new Wizard(nameField.getText());
                 testLabel.setText("You created a Wizard! Their name is: " + game.player.getName());
+                newCharacterCreated = true;
             }
             else if(chosenTypeLabel.equals("Fighter")){
                 game.player = new Fighter(nameField.getText());
                 testLabel.setText("You created a Fighter! Their name is: " + game.player.getName());
+                newCharacterCreated = true;
             }
             else{
 
             }
-            if(game.player != null)
+            if(newCharacterCreated)
                 startAdventurePanel.setVisible(true);
 
 

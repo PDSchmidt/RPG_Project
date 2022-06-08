@@ -18,7 +18,6 @@ public class TitleScreen extends Screen{
     CreditScreenHandler csHandler = new CreditScreenHandler();
 
     public TitleScreen(){
-
     }
     public TitleScreen(String type, Container container, GameManager game) {
         super(type,container,game);
@@ -99,7 +98,6 @@ public class TitleScreen extends Screen{
         con.repaint();
 
     }
-
     @Override
     public void updateVisibility(boolean newValue) {
         super.updateVisibility(newValue);
@@ -116,6 +114,41 @@ public class TitleScreen extends Screen{
     public void createNewGame(){
         updateVisibility(false);
         game.changeScreen("newCharacterScreen");
+    }
+    private void loadGame() {
+        try {
+            Scanner scnr = new Scanner(new File("savefile3.txt"));
+            String type = scnr.next();
+            if(type.equals("Rogue")){
+                game.player = new Rogue();
+            }
+            else if(type.equals("Wizard")){
+                game.player = new Wizard();
+            }
+            else{
+                game.player = new Fighter();
+            }
+            game.player.name = scnr.next();
+            game.player.setCurrentHp(scnr.nextInt());
+
+            if (scnr.next().equals("true"))
+                game.screens.get("roomOne").updateAfterVictory();
+            if (scnr.next().equals("true"))
+                game.screens.get("roomTwo").updateAfterVictory();
+            if (scnr.next().equals("true"))
+                game.screens.get("roomThree").updateAfterVictory();
+            if (scnr.next().equals("true"))
+                game.screens.get("bossRoom").updateAfterVictory();
+
+            loadedStatus.setText("LOADED " + game.player.getName() + " SUCCESSFULLY!");
+            scnr.close();
+
+            continuePanel.setVisible(true);
+            con.repaint();
+        } catch(FileNotFoundException e) {
+            loadedStatus.setText(e.toString());
+            con.repaint();
+        }
     }
     public class NewGameButtonHandler implements ActionListener{
 
@@ -139,53 +172,6 @@ public class TitleScreen extends Screen{
         public void actionPerformed(ActionEvent e) {
             updateVisibility(false);
             game.changeScreen("dungeonEntrance");
-        }
-    }
-
-    private void loadGame() {
-        try {
-            Scanner scnr = new Scanner(new File("savefile3.txt"));
-            String type = scnr.next();
-            if(type.equals("Rogue")){
-                game.player = new Rogue();
-            }
-            else if(type.equals("Wizard")){
-                game.player = new Wizard();
-            }
-            else{
-                game.player = new Fighter();
-            }
-            game.player.name = scnr.next();
-            //game.player.stats.put("Strength", scnr.nextInt());
-            //game.player.stats.put("Dexterity", scnr.nextInt());
-            //game.player.stats.put("Constitution", scnr.nextInt());
-            //game.player.stats.put("Intelligence", scnr.nextInt());
-            //game.player.stats.put("Wisdom", scnr.nextInt());
-            //game.player.stats.put("Charisma", scnr.nextInt());
-            game.player.setCurrentHp(scnr.nextInt());
-            //need setters for setMaxHP and Name
-            //game.player.setMaxHP(scnr.nextInt());
-
-            if (scnr.next().equals("true"))
-                game.screens.get("roomOne").updateAfterVictory();
-            //if scnrnext true roomTwo.updateAfterVictory()
-            if (scnr.next().equals("true"))
-                game.screens.get("roomTwo").updateAfterVictory();
-            //if scnrnext true roomThree.updateAfterVictory()
-            if (scnr.next().equals("true"))
-                game.screens.get("roomThree").updateAfterVictory();
-            //if scnrnext true bossRoom.updateAfterVictory()
-            if (scnr.next().equals("true"))
-                game.screens.get("bossRoom").updateAfterVictory();
-
-            loadedStatus.setText("LOADED " + game.player.getName() + " SUCCESSFULLY!");
-            scnr.close();
-
-            continuePanel.setVisible(true);
-            con.repaint();
-        } catch(FileNotFoundException e) {
-            loadedStatus.setText(e.toString());
-            con.repaint();
         }
     }
 }

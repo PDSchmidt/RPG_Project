@@ -1,7 +1,7 @@
-Fighter
-LEROY
-68
-false
-false
+Wizard
+Jeff
+48
+true
+true
 false
 false

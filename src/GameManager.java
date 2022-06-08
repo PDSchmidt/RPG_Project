@@ -28,9 +28,6 @@ public class GameManager {
         });
 
     }
-    public void updateDisplayText(String newText){
-
-    }
     public GameManager(){
         //Create main window
         mainWindow = new JFrame();
@@ -57,8 +54,6 @@ public class GameManager {
         screens.put("bossRoom", bossRoom);
         Screen newCharacterScreen = new NewCharacterScreen("newCharacterScreen",con, this);
         screens.put("newCharacterScreen",newCharacterScreen);
-        Screen loadCharacterScreen = new LoadCharacterScreen("loadCharacterScreen", con, this);
-        screens.put("loadCharacterScreen",loadCharacterScreen);
         Screen creditScreen = new CreditScreen("creditScreen", con, this);
         screens.put("creditScreen",creditScreen);
         Screen victoryScreen = new VictoryScreen("victoryScreen", con, this);

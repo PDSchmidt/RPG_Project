@@ -22,7 +22,6 @@ public class Screen {
 
 
     public Screen(){
-
     }
     public Screen(String type, Container container, GameManager game){
         this.game = game;
@@ -65,12 +64,49 @@ public class Screen {
         });
 
     }
-    public void setDefaultText(){
-
-        mainText.setText(defaultText);
-    }
     public void updateVisibility(boolean newValue){
         visibility = newValue;
+    }
+
+    public void doCombat() throws InterruptedException {
+        updateCombatButtons(true);
+        con.repaint();
+        con.revalidate();
+        if(!combatDone && game.player.getCurrentHP() > 0){
+            String result = game.player.attack(monsters.peek()) + "\n";
+            con.repaint();
+            if(monsters.peek().getCurrentHP() > 0){
+                monsters.add(monsters.remove());
+            }
+            else{
+                monsters.remove();
+            }
+            if(monsters.isEmpty()) {
+                combatDone = true;
+                updateAfterVictory();
+                return;
+            }
+            for(GameCharacter monster : monsters){
+                result += monster.attack(game.player) + "\n";
+                if(game.player.getCurrentHP() <= 0){
+                    updateText("The challenge was too great for you. . . you were defeated.");
+                    mainButtonPanel.removeAll();
+                    cowardCreditsButton = new JButton("SHAME");
+                    cowardCreditsButton.setFocusPainted(false);
+                    cowardCreditsButton.setForeground(Color.WHITE);
+                    cowardCreditsButton.setBackground(Color.BLACK);
+                    cowardCreditsButton.setFont(buttonFont);
+                    cowardCreditsButton.addActionListener(ccHandler);
+                    mainButtonPanel.add(cowardCreditsButton);
+                }
+            }
+            updateText(result);
+        }
+    }
+    public void updateCombatButtons(boolean b) {
+    }
+
+    public void updateAfterVictory(){
     }
     public class CowardCreditScreenHandler implements ActionListener{
 
@@ -109,69 +145,4 @@ public class Screen {
             }
         }
     }
-    public void doCombat() throws InterruptedException {
-        updateCombatButtons(true);
-        con.repaint();
-        con.revalidate();
-        if(!combatDone && game.player.getCurrentHP() > 0){
-            String result = game.player.attack(monsters.peek()) + "\n";
-            con.repaint();
-            //Thread.sleep(1000);
-            if(monsters.peek().getCurrentHP() > 0){
-                monsters.add(monsters.remove());
-            }
-            else{
-                monsters.remove();
-            }
-            if(monsters.isEmpty()) {
-                combatDone = true;
-                updateAfterVictory();
-                return;
-            }
-            for(GameCharacter monster : monsters){
-                result += monster.attack(game.player) + "\n";
-                if(game.player.getCurrentHP() <= 0){
-                    updateText("The challenge was too great for you. . . you were defeated.");
-                    mainButtonPanel.removeAll();
-                    cowardCreditsButton = new JButton("SHAME");
-                    cowardCreditsButton.setFocusPainted(false);
-                    cowardCreditsButton.setForeground(Color.WHITE);
-                    cowardCreditsButton.setBackground(Color.BLACK);
-                    cowardCreditsButton.setFont(buttonFont);
-                    cowardCreditsButton.addActionListener(ccHandler);
-                    mainButtonPanel.add(cowardCreditsButton);
-                }
-            }
-            updateText(result);
-        }
-    }
-
-    public void updateCombatButtons(boolean b) {
-    }
-
-    public void updateAfterVictory(){
-
-    }
-
-
 }
-
-
-/*//GameManager GUI
-CLICK BUTTON()
-    createCharacter("Name", "Choice"){
-
-        if("Choice".equals("Rogue")){
-            Character player = new Rogue("Name")
-        }
-        else if("Choice".equals("Cleric")){
-            Character player = new Cleric("Name")
-        }
-        else if("Choice".equals("Wizard")){
-            Character player = new Wizard("Name")
-        }
-}
-
-public wizard("Name"){
-    //Create with specific stats and name
-}*/
