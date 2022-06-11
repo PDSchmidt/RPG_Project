@@ -1,7 +1,7 @@
-Wizard
-Jeff
-48
-true
-true
-true
+Rogue
+Rayray
+54
+false
+false
+false
 false

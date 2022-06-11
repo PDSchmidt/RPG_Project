@@ -9,7 +9,7 @@ public class GameManager {
     Map<String,Screen> screens;
     JFrame mainWindow;
     Container con;
-    boolean cowardEnding;
+    boolean cowardEnding, newCharacterCreated;
     public static void main(String[] args){
         EventQueue.invokeLater(new Runnable() {
             @Override

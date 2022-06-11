@@ -111,6 +111,7 @@ public class TitleScreen extends Screen{
 
     }
     public void createNewGame(){
+        game.newCharacterCreated = false;
         updateVisibility(false);
         game.changeScreen("newCharacterScreen");
     }

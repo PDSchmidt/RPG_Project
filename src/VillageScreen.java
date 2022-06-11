@@ -58,7 +58,7 @@ public class VillageScreen extends Screen{
                 displayTextCount++;
             }
             if(displayTextCount == 2){
-                CreditScreenHandler csHandler = new CreditScreenHandler();
+                CowardCreditScreenHandler csHandler = new CowardCreditScreenHandler();
                 mainButtonPanel.remove(continueButton);
                 JButton noButton = new JButton("Refuse");
                 noButton.setBackground(Color.BLACK);

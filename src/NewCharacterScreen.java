@@ -4,7 +4,6 @@ import javax.swing.*;
 import java.awt.*;
 public class NewCharacterScreen extends Screen{
     String chosenTypeLabel = "";
-    boolean newCharacterCreated = false;
     JPanel textDisplayPanel, optionButtonPanel, startAdventurePanel;
     JLabel testLabel;
 
@@ -114,11 +113,15 @@ public class NewCharacterScreen extends Screen{
 
     @Override
     public void updateVisibility(boolean newValue) {
+        chosenTypeLabel = "";
+        testLabel.setText("Choose your player: " + chosenTypeLabel);
+        nameField.setText("Enter your character's name here");
+        con.repaint();
         visibility = newValue;
         textDisplayPanel.setVisible(visibility);
         optionButtonPanel.setVisible(visibility);
         startAdventurePanel.setVisible(false);
-        if(newCharacterCreated)
+        if(game.newCharacterCreated)
             startAdventurePanel.setVisible(visibility);
 
     }
@@ -126,6 +129,7 @@ public class NewCharacterScreen extends Screen{
 
         @Override
         public void actionPerformed(ActionEvent e) {
+            game.player = null;
             updateVisibility(false);
             game.changeScreen("titleScreen");
         }
@@ -166,22 +170,22 @@ public class NewCharacterScreen extends Screen{
             if(chosenTypeLabel.equals("Rogue")){
                 game.player = new Rogue(nameField.getText());
                 testLabel.setText("You created a Rogue! Their name is: " + game.player.getName());
-                newCharacterCreated = true;
+                game.newCharacterCreated = true;
             }
             else if(chosenTypeLabel.equals("Wizard")){
                 game.player = new Wizard(nameField.getText());
                 testLabel.setText("You created a Wizard! Their name is: " + game.player.getName());
-                newCharacterCreated = true;
+                game.newCharacterCreated = true;
             }
             else if(chosenTypeLabel.equals("Fighter")){
                 game.player = new Fighter(nameField.getText());
                 testLabel.setText("You created a Fighter! Their name is: " + game.player.getName());
-                newCharacterCreated = true;
+                game.newCharacterCreated = true;
             }
             else{
 
             }
-            if(newCharacterCreated)
+            if(game.newCharacterCreated)
                 startAdventurePanel.setVisible(true);
 
 
