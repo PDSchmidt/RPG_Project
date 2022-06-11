@@ -1,0 +1,13 @@
+Use the main method in GameManager to run the program.
+Used the first few videos from this tutorial to learn the Swing basics: https://www.youtube.com/watch?v=G5yr4sekAI0
+
+As you create a new character, you must get to the Camp in order to save and load the new character.
+Your progress is not automatically saved by design.
+
+After you've cleared a dungeon room, make sure to head back to camp and rest to replenish your HP and save your progress.
+
+Rogue: Has a higher chance to hit, does above average damage, but has less HP
+Wizard: Always hits, does the least amount of damage, and has less HP
+Fighter: Has an average chance to hit, average damage, and higher HP
+
+Enjoy!
